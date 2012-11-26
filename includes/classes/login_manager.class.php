@@ -103,22 +103,27 @@ Questa funzione da falso se non è loggiato, se è loggiato da
 un array con(idu, username, password, rule)
 */
 	function whois_logged(){
-		// Controllo se è loggiato, in caso contrario ritorno falso.
-		if(!$this->is_logged()){
+        // Controllo se sono settati correttamente i cookies. In caso contrario ritorno falso
+        if(!isset($_COOKIE['idl_casual']) or is_null($_COOKIE['idl_casual'])){
 			return false;
-		}
-
-		// Prendo l'id dell'utente dalla tebella dei logins
+        }
+        
+        // Controllo se l'utente è loggiato
 		$idl_casual = $this->db->escape_string($_COOKIE['idl_casual']);
 		$result = $this->db->query("SELECT * FROM `logins` WHERE `idl_casual` = '$idl_casual'");
 		$result = $this->db->fetch_assoc($result);
-		$idu = $result['idu'];
-
+		if(is_null($result['idl_casual'])){
+			return false;
+		}
+		else{
+			return true;
+		}
+        
 		// Prendo il nome dell'utente dalla tabella degli utenti con l'id dell'utente
-		$result = $this->db->query("SELECT * FROM `users` WHERE `idu` = '$idu'");
+		$result = $this->db->query("SELECT * FROM `users` WHERE `idu` = '".$result['idu']."'");
 		$result = $this->db->fetch_assoc($result);
 
-		// Ritorno l'username
+		// Ritorno l'array con le info sull'utente
 		return $result;
 		
 	}
