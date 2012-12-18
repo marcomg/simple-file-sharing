@@ -115,9 +115,9 @@ un array con(idu, username, password, rule)
 		if(is_null($result['idl_casual'])){
 			return false;
 		}
-		else{
+		/*else{
 			return true;
-		}
+		}*/
         
 		// Prendo il nome dell'utente dalla tabella degli utenti con l'id dell'utente
 		$result = $this->db->query("SELECT * FROM `users` WHERE `idu` = '".$result['idu']."'");
