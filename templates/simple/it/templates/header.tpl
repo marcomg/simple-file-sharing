@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>{if isset($title)}{$title}{/if}</title>
+<link rel="icon" href="{$smarty.const.DIR_TEMPLATE_IMGS}/favicon.ico" />
 </head>
 <body>
 <br/>
