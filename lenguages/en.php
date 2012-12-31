@@ -65,5 +65,5 @@ You are not authorized to download!',
 
 'title_register_true' => 'Registered successfully',
 
-'title_register_false' => 'Registration is not carried out'
+'title_register_false' => 'Registration is not carried out');
 ?>
