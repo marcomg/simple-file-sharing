@@ -14,10 +14,11 @@ var $n_string = 16;
 
 
 	// Funzione per la registrazione
-	function register($username, $password){
+	function register($username, $password, $rule='user'){
 		// Escape delle stringhe
 		$username = $this->db->escape_string($username);
 		$password = $this->db->escape_string($password);
+        $rule = this->db->escape_string($rule);
 		$result = $this->db->query("SELECT * FROM `users` WHERE `username` = '$username'");
 		$result = $this->db->fetch_assoc($result);
 		$result = $result['idu'];
@@ -25,7 +26,7 @@ var $n_string = 16;
 			return false;
 		}
 		else{
-			$result = $this->db->query("INSERT INTO `users` (`idu`, `username`, `password`, `rule`) VALUES (NULL, '$username', '$password', 'user')");
+			$result = $this->db->query("INSERT INTO `users` (`idu`, `username`, `password`, `rule`) VALUES (NULL, '$username', '$password', '$rule')");
 			return true;
         }
     }
