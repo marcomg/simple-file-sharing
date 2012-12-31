@@ -54,5 +54,7 @@ switch($_GET['user_action']){
     
 }
 
+$smarty->assign('title', $string['title_ucp']);
+
 $smarty->display('ucp.tpl');
 ?>

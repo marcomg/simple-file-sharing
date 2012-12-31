@@ -91,6 +91,9 @@ if(move_uploaded_file($_FILES['file']['tmp_name'], ROOT.'/uploads/'.$filename)){
     $smarty->assign('file_password', $_POST['password']);
     $smarty->assign('file_visibility', $_POST['visibility']);
     $smarty->assign('link_file', 'http://'.SCRIPT_URL.DIR_INSTALL.'/index.php?action=download&file='.$filename);
+    
+    $smartu->assign('title', $string['title_upload']);
+    
     $smarty->display('upload.tpl');
 }
 

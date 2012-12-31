@@ -4,6 +4,7 @@ This file contains all the strings used by this script.
 */
 
 $string = array(
+
 'registration_error'=>'There was an error:<br/>
 &bull;check that you have entered all the fields;<br/>
 &bull;Could it be that the username you specified has already been used by someone else, try a different one!<br/>',
@@ -35,5 +36,34 @@ You are not authorized to download!',
 
 'upload_error_too_file' => 'Error, you have exceeded the maximum number of files. Delete something!',
 
-'registration_disabled' => 'Error, registration has been disabled.');
+'registration_disabled' => 'Error, registration has been disabled.',
+
+// Titles
+'title_download' => 'Download',
+
+'title_file_browser' => 'File browser',
+
+'title_redirecting' => 'Rediricting',
+
+'title_logout' => 'Logout',
+
+'title_file_overview' => 'File overview',
+
+'title_home_page' => 'Home Page',
+
+'title_upload' => 'Upload',
+
+'title_login' => 'Login',
+
+'title_login_true' => 'Login successful',
+
+'title_login_false' => 'Login wrong',
+
+'title_ucp' => 'User control panel',
+
+'title_register' => 'Register',
+
+'title_register_true' => 'Registered successfully',
+
+'title_register_false' => 'Registration is not carried out'
 ?>

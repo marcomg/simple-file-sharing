@@ -86,6 +86,7 @@ switch($_GET['action_file']){
         exit;
     break;
 }
+$smarty->assign('title', 'title_file_overview');
 
 $smarty->display('file_manipulator.tpl');
 

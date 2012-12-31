@@ -74,5 +74,6 @@ if(isset($can_download) and $can_download == 'yes'){
     readfile(ROOT.'/uploads/'.$_GET['file']);
     exit;
 }
+$smarty->assign('title', $string['title_download']);
 $smarty->display('download.tpl');
 ?>

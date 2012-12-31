@@ -48,5 +48,7 @@ $smarty->assign('file_name', $file_name);
 $smarty->assign('file_password', $file_password);
 $smarty->assign('file_visibility', $file_visibility);
 
+$smarty->assign('title', $string['title_file_browser']);
+
 $smarty->display('file_browser.tpl');
 ?>

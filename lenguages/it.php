@@ -35,5 +35,34 @@ Non sei autorizzato a scaricare!',
 
 'upload_error_too_file' => 'Errore, hai superato il limite massimo di quantità di file. Cancella qualcosa!',
 
-'registration_disabled' => 'Errore, la registrazione è stata disabilitata.');
+'registration_disabled' => 'Errore, la registrazione è stata disabilitata.',
+
+// Titoli
+'title_download' => 'Download',
+
+'title_file_browser' => 'File browser',
+
+'title_redirecting' => 'Reindirizzamento',
+
+'title_logout' => 'Logout',
+
+'title_file_overview' => 'Panoramica file',
+
+'title_home_page' => 'Pagina principale',
+
+'title_upload' => 'Upload',
+
+'title_login' => 'Login',
+
+'title_login_true' => 'Login successo',
+
+'title_login_false' => 'Login errato',
+
+'title_ucp' => 'Pannello di controllo utente',
+
+'title_register' => 'Registrati',
+
+'title_register_true' => 'Registrazione effettuata con successo',
+
+'title_register_false' => 'Registrazione non effettuata');
 ?>
