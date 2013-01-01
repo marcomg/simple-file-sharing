@@ -18,7 +18,7 @@ var $n_string = 16;
 		// Escape delle stringhe
 		$username = $this->db->escape_string($username);
 		$password = $this->db->escape_string($password);
-		$rule = this->db->escape_string($rule);
+		$rule = $this->db->escape_string($rule);
 		$result = $this->db->query("SELECT * FROM `users` WHERE `username` = '$username'");
 		$result = $this->db->fetch_assoc($result);
 		$result = $result['idu'];
