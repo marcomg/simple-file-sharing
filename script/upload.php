@@ -19,6 +19,7 @@ if(!$user){
 // Se non è settato il post allora stampo il form
 if(!isset($_POST['visibility']) or !isset($_FILES['file'])){
     $smarty->assign('max_file_size', return_human_value(MAX_FILE_SIZE));
+    $smarty->assign('title', $string['title_upload']);
     $smarty->display('form_upload.tpl');
     exit;
 }
@@ -92,7 +93,7 @@ if(move_uploaded_file($_FILES['file']['tmp_name'], ROOT.'/uploads/'.$filename)){
     $smarty->assign('file_visibility', $_POST['visibility']);
     $smarty->assign('link_file', 'http://'.SCRIPT_URL.DIR_INSTALL.'/index.php?action=download&file='.$filename);
     
-    $smartu->assign('title', $string['title_upload']);
+    $smarty->assign('title', $string['title_upload']);
     
     $smarty->display('upload.tpl');
 }
