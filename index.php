@@ -19,7 +19,7 @@ $smarty = new Smarty();
 require(ROOT.'/includes/config_smarty.php');
 
 // Includo il file per la traduzione di avvisi ed errori
-include(ROOT.'/lenguages/'.LENGUAGE.'.php');
+include(ROOT.'/languages/'.LANGUAGE.'.php');
 
 // Includo il file di commons. Contiene molte cose tra cui la traduzione in byte di alcune variabili nel file di configurazione.
 require(ROOT.'/includes/commons.php');
