@@ -44,7 +44,7 @@ switch($_GET['user_action']){
     case 'overview':
         $smarty->assign('username', $user['username']);
         $smarty->assign('password', $user['password']);
-        $smarty->assign('space_occuped', 'DATO NON DISPONIBILE'/*return_human_value(space_occuped($user['idu']))*/);
+        $smarty->assign('space_occuped', return_human_value(space_occuped($user['idu'])));
         $smarty->assign('space_max', return_human_value(MAX_FILE_SIZE));
     break;
     

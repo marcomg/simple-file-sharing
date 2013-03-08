@@ -17,5 +17,6 @@ function space_occuped($user_idu){
     while($result_f = $db->fetch_array($result)){
         $space_occuped = $space_occuped + $result_f['file_size'];
     }
+    return($space_occuped);
 }
 ?>
