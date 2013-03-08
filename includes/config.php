@@ -10,7 +10,7 @@ File di configurazione del database. Serve per gestire il basso livello dello sc
 define('db_hostname', 'localhost');// Indirizzo del server mysql
 define('db_username', 'root');// Nome utente del server mysql
 define('db_password', '');// Password del nome utente del server mysql
-define('db_database', 'file_manager');// Database mysql
+define('db_database', 'simple-file-sharing');// Database mysql
 
 
 /*

@@ -16,7 +16,10 @@ Cambia password: <form action="index.php?action=file_manipulator&action_file=pas
     <input type="submit" name="submit" value="Cambia Password" />
 </form><br/>
 <a href="index.php?action=file_manipulator&action_file=delete&file={$file_new_name}" onclick="return confirm('Attenzione! Questa operazione sarà irreversibile. Il file {$file_name} verrà eliminato dal sistema. Continuare? ')">Cancella file</a><br/>
-<a href="index.php?action=file_manipulator&action_file=visibility_change&file={$file_new_name}">{if ($file_visibility == 'public')}Rendi il file privato{else}Rendi il file pubblico{/if}</a>
+
+<a href="index.php?action=file_manipulator&action_file=idf_change&file={$file_new_name}" onclick="return confirm('Attenzione! Questa operazione sarà irreversibile. Il file {$file_name} non avrà più lo stesso codice identificativo e quindi tutti i link ad esso associati porteranno ad un errore e dovranno essere aggiornati. Continuare? ')">Cambia l'identificativo del file</a><br/>
+
+<a href="index.php?action=file_manipulator&action_file=idf_change&file={$file_new_name}">{if ($file_visibility == 'public')}Rendi il file privato{else}Rendi il file pubblico{/if}</a>
 {/if}
 
 {include file='footer.tpl'}

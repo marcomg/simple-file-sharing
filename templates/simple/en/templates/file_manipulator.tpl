@@ -16,6 +16,9 @@ Change password: <form action="index.php?action=file_manipulator&action_file=pas
     <input type="submit" name="submit" value="Change Password" />
 </form><br/>
 <a href="index.php?action=file_manipulator&action_file=delete&file={$file_new_name}" onclick="return confirm('Warning! This operation is irreversible. The file {$file_name} will be removed from the system. Continue?')">Delete file</a><br/>
+
+<a href="index.php?action=file_manipulator&action_file=idf_change&file={$file_new_name}" onclick="return confirm('Warning! This operation is irreversible. The file {$file_name} will not have the same identification code and then all the links associated with it will result in an error age and must be updated. Continue?')">Change file id</a><br/>
+
 <a href="index.php?action=file_manipulator&action_file=visibility_change&file={$file_new_name}">{if ($file_visibility == 'public')}Make private file {else} Make the file public{/if}</a>
 {/if}
 

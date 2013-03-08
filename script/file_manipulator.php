@@ -63,7 +63,25 @@ switch($_GET['action_file']){
         header('Location: ./index.php?action=file_browser');
         exit;
     break;
+    
+    case 'idf_change':
+        $query = $db->query('SELECT * FROM `files` WHERE `idu` = '.$user['idu'].' AND `file_new_name` = \''.$db->escape_string($_GET['file']).'\'');        
+        if(empty($query)){
+            header('Location: ./index.php?action=file_browser');
+            exit;
+        }
         
+        $filename = null;
+        while(file_exists(ROOT.'/uploads/'.$filename)){// Se 
+            $filename = string_gen(LONG_FILE_NAME);
+        }
+        $db->query('UPDATE `files` SET `file_new_name` = \''.$filename.'\' WHERE `file_new_name` = \''.$db->escape_string($_GET['file']).'\'');
+        if(copy(ROOT.'/uploads/'.$db->escape_string($_GET['file']), ROOT.'/uploads/'.$filename)){
+            header('Location: ./index.php?action=file_browser');
+        }
+        unlink(ROOT.'/uploads/'.$db->escape_string($_GET['file']));
+    break;
+    
     case 'overview':
         $query = $db->query('SELECT * FROM `files` WHERE `idu` = '.$user['idu'].' AND `file_new_name` = \''.$db->escape_string($_GET['file']).'\'');        
         if(empty($query)){
@@ -86,7 +104,7 @@ switch($_GET['action_file']){
         exit;
     break;
 }
-$smarty->assign('title', 'title_file_overview');
+$smarty->assign('title', $string['title_file_overview']);
 
 $smarty->display('file_manipulator.tpl');
 
