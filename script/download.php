@@ -68,7 +68,7 @@ if(isset($can_download) and $can_download == 'yes'){
     header('Cache-Control: public');
     header('Content-Description: File Transfer');
     header('Content-type: '.$result['file_type']);
-    header('Content-Disposition: attachment; filename= ' . $result['file_name']);
+    header('Content-Disposition: attachment; filename= "' . $result['file_name'] . '"');
     header('Content-Length: '.$result['file_size']);
     header('Content-Transfer-Encoding: binary');
     readfile(ROOT.'/uploads/'.$_GET['file']);
