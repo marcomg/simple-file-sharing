@@ -9,5 +9,5 @@ $smarty->cache_dir = DIR_TEMPLATE.'/cache/';// La cartella delle cache
 //$smarty->caching = true;// Abilita la cache
 //$smarty->cache_lifetime = 20;// Vita della cache
 //$smarty->compile_check = true;// Disabilita il controllo dei template. Se false non verranno più ricompilati
-//$smarty->force_compile=true;// Forza la compilazione, non usare.
+$smarty->force_compile=true;// Forza la compilazione, non usare.
 ?>
