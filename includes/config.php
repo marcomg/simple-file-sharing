@@ -18,12 +18,13 @@ File di configurazione dello script php
 */
 
 define('SCRIPT_URL', 'localhost'); // Url sito senza slash finale
-define('TEMPLATE_FOLDER', 'templates/simple'); // Url dove si trovano i template senza slash finale
+define('TEMPLATE_FOLDER', 'templates/twitter'); // Url dove si trovano i template senza slash finale
 define('DIR_INSTALL', '/simple-file-sharing'); // cartella nella quale è lo script Es '/cartella' (serve solo per i template) non mettere lo slash finale!! Mettere quello iniziale. Nel caso di installazione nella root non mettere nulla!
 define('LANGUAGE', 'it'); // Lingua nella quale visualizzare lo script
 define('LONG_FILE_NAME', 5); // Lunghezza del nome del file.
 define('DIR_TEMPLATE', ROOT.'/'.TEMPLATE_FOLDER.'/'.LANGUAGE);
-define('DIR_TEMPLATE_IMGS', './'.TEMPLATE_FOLDER.'/'.LANGUAGE.'/templates/images');
+define('DIR_TEMPLATE_VAR', './'.TEMPLATE_FOLDER.'/'.LANGUAGE.'/templates');
+define('DIR_TEMPLATE_IMGS', DIR_TEMPLATE_VAR.'/images');
 define('USER_CAN_REGISTER', 'true');
 
 /*
