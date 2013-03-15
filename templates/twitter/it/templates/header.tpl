@@ -7,7 +7,7 @@
 <link href="{$smarty.const.DIR_TEMPLATE_VAR}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 </head>
 <body>
-<script src="{$smarty.const.DIR_TEMPLATE_VAR}/bootstrap/jquery.js"></script>
+<script src="{$smarty.const.DIR_TEMPLATE_VAR}/js/jquery.js"></script>
 <script src="{$smarty.const.DIR_TEMPLATE_VAR}/bootstrap/js/bootstrap.min.js"></script>
 <br/>
 
