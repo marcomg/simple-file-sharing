@@ -13,13 +13,13 @@ Condividi file: <input type="text" value="http://{$smarty.const.SCRIPT_URL}{$sma
 <h2>Modifica file</h2>
 Cambia password: <form action="index.php?action=file_manipulator&action_file=password_change&file={$file_new_name}" method="post" enctype="multipart/form-data">
     <input type="password" name="password" />
-    <input type="submit" name="submit" value="Cambia Password" />
+    <input class="btn" type="submit" name="submit" value="Cambia Password" />
 </form><br/>
-<a href="index.php?action=file_manipulator&action_file=delete&file={$file_new_name}" onclick="return confirm('Attenzione! Questa operazione sarà irreversibile. Il file {$file_name} verrà eliminato dal sistema. Continuare? ')">Cancella file</a><br/>
+<a class="btn btn-danger" href="index.php?action=file_manipulator&action_file=delete&file={$file_new_name}" onclick="return confirm('Attenzione! Questa operazione sarà irreversibile. Il file {$file_name} verrà eliminato dal sistema. Continuare? ')">Cancella file</a><br/>
 
-<a href="index.php?action=file_manipulator&action_file=idf_change&file={$file_new_name}" onclick="return confirm('Attenzione! Questa operazione sarà irreversibile. Il file {$file_name} non avrà più lo stesso codice identificativo e quindi tutti i link ad esso associati porteranno ad un errore e dovranno essere aggiornati. Continuare? ')">Cambia l'identificativo del file</a><br/>
+<a class="btn btn-danger" href="index.php?action=file_manipulator&action_file=idf_change&file={$file_new_name}" onclick="return confirm('Attenzione! Questa operazione sarà irreversibile. Il file {$file_name} non avrà più lo stesso codice identificativo e quindi tutti i link ad esso associati porteranno ad un errore e dovranno essere aggiornati. Continuare? ')">Cambia l'identificativo del file</a><br/>
 
-<a href="index.php?action=file_manipulator&action_file=visibility_change&file={$file_new_name}">{if ($file_visibility == 'public')}Rendi il file privato{else}Rendi il file pubblico{/if}</a>
+<a class="btn" href="index.php?action=file_manipulator&action_file=visibility_change&file={$file_new_name}">{if ($file_visibility == 'public')}Rendi il file privato{else}Rendi il file pubblico{/if}</a>
 {/if}
 </div>
 {include file='footer.tpl'}

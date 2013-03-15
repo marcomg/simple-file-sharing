@@ -7,19 +7,17 @@ function onSubmitButton(){
 }
 </script>
 
-<form action="index.php?action=upload" method="post" enctype="multipart/form-data" onsubmit="return onSubmitButton()">
-&bull;Visibilità file:<br/>
+<form class="form-horizontal" action="index.php?action=upload" method="post" enctype="multipart/form-data" onsubmit="return onSubmitButton()">
+<label>Visibilità file:<label>
 <select name="visibility">
 <option value="public">Pubblico</option>
 <option value="private">Privato</option>
 </select><br/>
-&bull;File (dimensione max: {$max_file_size}):<br/>
+<label>File (dimensione max: {$max_file_size}):<label>
 <input type="file" name="file" /><br />
-<br/>
-Password:<br/>
+<label>Password:</label>
 <input type="password" name="password" /><br/>
 <br/>
-
 <div id="submitButtonDiv">
 <input class = "btn btn-primary" type="submit" name="submit" value="Upload" id="submitButton"/>
 </div>

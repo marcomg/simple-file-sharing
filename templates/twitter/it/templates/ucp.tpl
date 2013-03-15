@@ -17,7 +17,8 @@
 
 
 <h2>Modifiche utente</h2>
-Cambia la password:<form action="index.php?action=ucp&user_action=change_password" method="post" enctype="multipart/form-data">
+<form action="index.php?action=ucp&user_action=change_password" method="post" enctype="multipart/form-data">
+    <label>Cambia la password:</label>
     <input type="password" name="password" />
     <input class="btn btn-primary" type="submit" name="submit" value="Cambia Password" />
 </form>
