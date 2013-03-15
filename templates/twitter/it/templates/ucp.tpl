@@ -17,13 +17,13 @@
 
 
 <h2>Modifiche utente</h2>
-<form action="index.php?action=ucp&user_action=change_password" method="post" enctype="multipart/form-data">
+<form action="index.php?action=ucp&amp;user_action=change_password" method="post" enctype="multipart/form-data">
     <label>Cambia la password:</label>
     <input type="password" name="password" />
     <input class="btn btn-primary" type="submit" name="submit" value="Cambia Password" />
 </form>
 
-<a class="btn btn-danger" href="./index.php?action=ucp&user_action=delete_user" onclick="return confirm('Sei sicuro di voler cancellare completamente il tuo account e tutti i file ad esso associati? Attenzione! Questa operazione è irreversibile!')">Cancella l'account</a>
+<a class="btn btn-danger" href="./index.php?action=ucp&amp;user_action=delete_user" onclick="return confirm('Sei sicuro di voler cancellare completamente il tuo account e tutti i file ad esso associati? Attenzione! Questa operazione è irreversibile!')">Cancella l'account</a>
 {/if}
 </div>
 {include file='footer.tpl'}

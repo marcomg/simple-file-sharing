@@ -7,6 +7,6 @@ Dettagli file:<br/>
 &bull; Password di download per gli utenti non registrati: {$file_password}<br/>
 &bull; Visibilità file: {$file_visibility}<br/>
 <br/>
-Link download file: {$link_file}<br/>
+Link download file: <input type="text" value="{$link_file}"/><br/>
 </div>
 {include file='footer.tpl'}

@@ -29,7 +29,7 @@
 
 {* Questo solo a chi lo ha effettuato *}
 
-<li><a href="./index.php?action=upload">Upload</a></li><li><a href="./index.php?action=file_browser">File Browser</a></li><li><a href="./index.php?action=ucp&user_action=overview">Pannello di controllo utente</a></li><li><a href="./index.php?action=logout">Logout</a></li>
+<li><a href="./index.php?action=upload">Upload</a></li><li><a href="./index.php?action=file_browser">File Browser</a></li><li><a href="./index.php?action=ucp&amp;user_action=overview">Pannello di controllo utente</a></li><li><a href="./index.php?action=logout">Logout</a></li>
 
 {/if}
 </ul>

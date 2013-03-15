@@ -1,6 +1,6 @@
 {include file='header.tpl'}
 <div class="container">
-Registrazione completata con successo!<br/>
+<div class="alert alert-success">Registrazione completata con successo!</div>
 Ecco il riassunto dei tuoi dati. Ti consigliamo di stampare questa pagina.<br/>
 Username: {$username}<br/> 
 Password: {$password}<br/>
