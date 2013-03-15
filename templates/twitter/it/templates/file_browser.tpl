@@ -1,5 +1,5 @@
 {include file='header.tpl'}
-
+<div class="container">
 {if !empty($idf)}
 <table border=1>
 <tr>
@@ -32,5 +32,5 @@ Non c'è nessun file di tua proprietà nel nostro database. Per vederne uno devi
 {if !empty($idf)}
 </table>
 {/if}
-
+</div>
 {include file='footer.tpl'}

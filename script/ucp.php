@@ -17,6 +17,7 @@ if(!$user){
 // A seconda dell'azione settata la eseguo
 switch($_GET['user_action']){
     case 'change_password':
+        if(!empty($_POST['password']))
         $login->change_password($user['username'], $_POST['password']);
         header('Location: ./index.php?action=ucp&user_Action=overview');
     break;

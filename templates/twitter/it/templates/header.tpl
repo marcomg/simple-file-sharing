@@ -5,13 +5,16 @@
 <title>{if isset($title)}{$title}{/if}</title>
 <link rel="icon" href="{$smarty.const.DIR_TEMPLATE_IMGS}/favicon.ico" />
 <link href="{$smarty.const.DIR_TEMPLATE_VAR}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
-</head>
-<body>
 <script src="{$smarty.const.DIR_TEMPLATE_VAR}/js/jquery.js"></script>
 <script src="{$smarty.const.DIR_TEMPLATE_VAR}/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
 <br/>
 
-<div class="navbar navbar-static-top">
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a class="brand" href="https://code.google.com/p/simple-file-sharing/">simple-file-sharing</a>
 <ul class="nav">
 {* Menù perenne *}
 <li><a href="./">Home Page</a></li>
@@ -31,12 +34,18 @@
 {/if}
 </ul>
 </div>
+</div>
+</div>
 <br/>
 
 {* Menù amministratore *}
 
-
-
 <br/>
-<p class="text-error">{if isset($error)}{$error}{/if}</p>
+{if isset($error)}
+<div class="container">
+<div class="alert alert-error">
+<p class="text-error">{$error}</p>
+</div>
+</div>
+{/if}
 <br/>

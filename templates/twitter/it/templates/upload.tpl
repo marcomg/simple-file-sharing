@@ -1,5 +1,5 @@
 {include file='header.tpl'}
-<br/>
+<div class="container">
 File uplodato con successo:<br/>
 Dettagli file:<br/>
 &bull; Nome file: {$file_name}<br/>
@@ -8,4 +8,5 @@ Dettagli file:<br/>
 &bull; Visibilità file: {$file_visibility}<br/>
 <br/>
 Link download file: {$link_file}<br/>
+</div>
 {include file='footer.tpl'}

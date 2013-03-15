@@ -1,6 +1,5 @@
 {include file='header.tpl'}
-<br/>
-
+<div class="container">
 <script type="text/javascript">
 function onSubmitButton(){
         document.getElementById("submitButtonDiv").style.display = "none";	
@@ -22,7 +21,7 @@ Password:<br/>
 <br/>
 
 <div id="submitButtonDiv">
-<input type="submit" name="submit" value="Upload" id="submitButton"/>
+<input class = "btn btn-primary" type="submit" name="submit" value="Upload" id="submitButton"/>
 </div>
 
 <div id="progressBar" style="display:none">
@@ -32,4 +31,5 @@ Password:<br/>
 </form>
 <br/>
 I campi contrassegnati da &bull; sono obbligatori.
+</div>
 {include file='footer.tpl'}

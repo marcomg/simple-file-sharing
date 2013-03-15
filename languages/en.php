@@ -6,8 +6,7 @@ This file contains all the strings used by this script.
 $string = array(
 
 'registration_error'=>'There was an error:<br/>
-&bull;check that you have entered all the fields;<br/>
-&bull;Could it be that the username you specified has already been used by someone else, try a different one!<br/>',
+<ul><li>check that you have entered all the fields;</li><li>Could it be that the username you specified has already been used by someone else, try a different one!</li></ul>',
 
 'error_incorrect_username_or_password' => 'Error: username or password is incorrect',
 

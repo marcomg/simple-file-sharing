@@ -37,7 +37,8 @@ if(in_array($_GET['action'].'.php', $action)){
 	include(ROOT.'/script/'.$_GET['action'].'.php');
 }
 else{
-	include(ROOT.'/script/error404.php');
+	$_GET['error'] = 404;
+	include(ROOT.'/script/errors.php');
 }
 
 ?>
