@@ -7,7 +7,7 @@ if(USER_CAN_REGISTER == 'false'){
 }
 
 // Se è inviato il form e tutti i campi sono stati inviati:
-if(isset($_POST['username']) or isset($_POST['username']) or !empty($_POST['username']) or !empty($_POST['password'])){
+if(isset($_POST['username']) and isset($_POST['username']) and !empty($_POST['username']) and !empty($_POST['password'])){
 
 	// Se c'è un qualche errore (es: username già registrato) allora stampo l'errore:
 	if(!$login->register($_POST['username'], $_POST['password'])){
