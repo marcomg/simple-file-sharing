@@ -44,17 +44,7 @@ if ($_FILES['file']['size'] > MAX_FILE_SIZE){
 // Controllo che non si abbia superato il limite di dati consentiti nel server
 if(MAX_DATA_FOR_USER != 0){
     // Prendo lo spazio occupato dall'utente $user['idu']
-        // Recupero le dimensioni dei file dell'utente
-    $result = $db->query('SELECT `file_size` FROM `files` WHERE `idu` = '.$user['idu']);
-    
-    // Setto per non generare notice
-    $space_occuped = 0;
-    
-    // Inseriscp il file occupato nella variabile $space_occuped
-    while($result_f = $db->fetch_array($result)){
-        $space_occuped = $space_occuped + $result_f['file_size'];
-    }
-    //$space_occuped = space_occuped($user['idu']);//disattivato poiché non va.
+    $space_occuped = space_occuped($user['idu']);
     
     // Lo sommo allo spazio occupato dal file appena uplodato.
     $space_occuped = $space_occuped + $_FILES['file']['size'];
