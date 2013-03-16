@@ -46,7 +46,7 @@ switch($_GET['user_action']){
         $smarty->assign('username', $user['username']);
         $smarty->assign('password', $user['password']);
         $smarty->assign('space_occuped', return_human_value(space_occuped($user['idu'])));
-        $smarty->assign('space_max', return_human_value(MAX_FILE_SIZE));
+        $smarty->assign('space_max', return_human_value(MAX_DATA_FOR_USER));
     break;
     
     default:
