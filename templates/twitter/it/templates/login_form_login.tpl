@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 <div class="container">
 Loggiati compilando il seguente form:<br/>
-<form method="post" action="index.php?action=login" name="login">
+<form class="form-horizontal" method="post" action="index.php?action=login" name="login">
 	<label>Nome utente:</label>
 	<input type="text" name="username" /><br/>
 	<label>Password:</label>
