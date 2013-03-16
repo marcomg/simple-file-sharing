@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `files` (
   `file_visibility` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idf`),
   KEY `idu` (`idu`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE IF EXISTS `logins`;
 CREATE TABLE IF NOT EXISTS `logins` (
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `logins` (
   `idu` int(11) NOT NULL,
   `ip` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idl`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
@@ -28,4 +28,4 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` text COLLATE utf8_unicode_ci NOT NULL,
   `rule` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idu`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
