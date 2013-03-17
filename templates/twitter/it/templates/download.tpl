@@ -7,7 +7,7 @@
     Inserisci la password:
     <form action="index.php?action=download&amp;file={$file_new_name}&amp;info=no" method="post" enctype="multipart/form-data">
     <input type="password" name="password" /><br/>
-    <input type="submit" name="submit" value="Download" />
+    <input class="btn btn-primary" type="submit" name="submit" value="Download" />
     </form>
     {else}
     No.

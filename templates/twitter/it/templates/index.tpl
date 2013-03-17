@@ -3,17 +3,17 @@
 <br/>
 <div class="container">
 <p>
-Questo è un programma scritto in php che ha lo scopo di permettere agli utente registrati di condividere file. Questo è solo un testo poiché questo script non è stato ancora finito di programmare!</p>
-<p>
-Il programma verrà rilasciato sotto licenza GPLv3
+Questo è un programma scritto in php per il file hosting. La registrazione è stata disabilitata poiché questo portale serve solo per testare il programma.
 </p>
+
 <p>
-In questa fase di test tutti gli utenti che si registrano possono caricare i propri file. Tutti i file che verranno caricati sono file di testo o immagini o archivi zippati senza licenza o con licenza libera.
+Il programma è rilasciato sotto licenza gplv3, se sei interessato a visionarne il codice puoi cliccare sul link nel footer della pagina che ti porta alla pagina di google code. Lì potrai clonare il repository git.
 </p>
+
 <p>
-Al fine di evitare che questo portale di test venga utilizzato come veicolo di condivisione di file protetti da copyright i file verranno cancellati spesso (almeno una volta al giorno) e si avrà pochissimo spazio di archiviazione.</p>
-<p>
-<b>Per poter caricare file o condividerli bisogna registrarsi. Una volta effettuato il login si avrà accesso ad un menù che permetterà di accedere alle funzionalità di upload</b></p>
+<b>Per poter caricare file o condividerli bisogna registrarsi. Una volta effettuato il login si avrà accesso ad un menù che permetterà di accedere alle funzionalità di upload</b>
+</p>
+
 </div>
 </div>
 {include file='footer.tpl'}
