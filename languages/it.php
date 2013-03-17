@@ -17,8 +17,6 @@ $string = array(
 
 'upload_error_file_too_big' => 'Errore, il file è troppo grande!',
 
-'404_title' => 'Errore 404',
-
 'file_not_isset' => 'Errore, il link che hai digitato non contiene l\'ID del file!',
 
 'file_not_exist' => 'Errore, il file che stai cercando di scaricare non esiste.',
@@ -37,6 +35,8 @@ Non sei autorizzato a scaricare!',
 'registration_disabled' => 'Errore, la registrazione è stata disabilitata.',
 
 // Titoli
+'404_title' => 'Errore 404',
+
 'title_download' => 'Download',
 
 'title_file_browser' => 'File browser',

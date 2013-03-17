@@ -7,6 +7,7 @@ if($user != false){
 
 switch($_GET['error']){
     case '404':
+        $smarty->assign('title', $string['404_title']);
         $smarty->display('error404.tpl');
     break;
     

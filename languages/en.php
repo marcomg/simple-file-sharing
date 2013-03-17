@@ -18,8 +18,6 @@ $string = array(
 
 'upload_error_file_too_big' => 'Error, the file is too big!',
 
-'404_title' => 'Error 404',
-
 'file_not_isset' => 'Error, the link that you entered does not contain the file ID!',
 
 'file_not_exist' => 'Error, the file you are trying to download does not exist.',
@@ -38,6 +36,8 @@ You are not authorized to download!',
 'registration_disabled' => 'Error, registration has been disabled.',
 
 // Titles
+'404_title' => 'Error 404',
+
 'title_download' => 'Download',
 
 'title_file_browser' => 'File browser',
