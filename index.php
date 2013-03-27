@@ -31,7 +31,7 @@ if(!isset($_GET['action']) or empty($_GET['action'])){
     header("location: index.php?action=index");
 }
 elseif(file_exists(ROOT.'/script/'.$_GET['action'].'.php')){
-	include(ROOT.'/script/'.$_GET['action'].'.php');
+    include(ROOT.'/script/'.$_GET['action'].'.php');
 }
 else{
     $_GET['error'] = 404;
