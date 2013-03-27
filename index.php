@@ -28,17 +28,14 @@ require(ROOT.'/includes/commons.php');
 // Ora avvio lo script a seconda di come è settata la variabile $_GET['action']
 // Se non è settata action reindirizzo con la page settata
 if(!isset($_GET['action']) or empty($_GET['action'])){
-	header("location: index.php?action=index");
-	exit;
+    header("location: index.php?action=index");
 }
-
-$action=elencafiles(ROOT.'/script/');
-if(in_array($_GET['action'].'.php', $action)){
+elseif(file_exists(ROOT.'/script/'.$_GET['action'].'.php')){
 	include(ROOT.'/script/'.$_GET['action'].'.php');
 }
 else{
-	$_GET['error'] = 404;
-	include(ROOT.'/script/errors.php');
+    $_GET['error'] = 404;
+    include(ROOT.'/script/errors.php');
 }
 
 ?>
