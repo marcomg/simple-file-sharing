@@ -1,3 +1,4 @@
+{strip}
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,3 +50,4 @@
 </div>
 {/if}
 <br/>
+{/strip}

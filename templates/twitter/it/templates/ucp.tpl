@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 {if isset($username)}
 <h1>Ciao {$username}!</h1>
@@ -26,4 +26,4 @@
 <a class="btn btn-danger" href="./index.php?action=ucp&amp;user_action=delete_user" onclick="return confirm('Sei sicuro di voler cancellare completamente il tuo account e tutti i file ad esso associati? Attenzione! Questa operazione è irreversibile!')">Cancella l'account</a>
 {/if}
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}

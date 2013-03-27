@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 {if isset($file_name)}
     Nome file: {$file_name}<br/>
@@ -17,4 +17,4 @@
     {/if}
 {/if}
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}

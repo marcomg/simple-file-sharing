@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 <script type="text/javascript">
 function onSubmitButton(){
@@ -30,4 +30,4 @@ function onSubmitButton(){
 <br/>
 I campi contrassegnati da &bull; sono obbligatori.
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}

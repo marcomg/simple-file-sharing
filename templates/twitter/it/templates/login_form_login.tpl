@@ -1,7 +1,7 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 Loggiati compilando il seguente form:<br/>
-<form class="form-horizontal" method="post" action="index.php?action=login" name="login">
+<form method="post" action="index.php?action=login" name="login">
 	<label>Nome utente:</label>
 	<input type="text" name="username" /><br/>
 	<label>Password:</label>
@@ -10,4 +10,4 @@ Loggiati compilando il seguente form:<br/>
 	<input class="btn btn-primary" type="submit" value="Invia" name="send"/>
 </form>
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}

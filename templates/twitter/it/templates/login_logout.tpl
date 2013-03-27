@@ -1,5 +1,5 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 <div class="alert alert-success">Logout effettuato con successo.</div>
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}

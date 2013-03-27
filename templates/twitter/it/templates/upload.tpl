@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 File uplodato con successo:<br/>
 Dettagli file:<br/>
@@ -9,4 +9,4 @@ Dettagli file:<br/>
 <br/>
 Link download file: <input type="text" value="{$link_file}"/><br/>
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}

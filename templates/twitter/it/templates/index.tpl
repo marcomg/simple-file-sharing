@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 <br/>
 <div class="container">
@@ -15,5 +15,4 @@ Il programma è rilasciato sotto licenza gplv3, se sei interessato a visionarne 
 </p>
 
 </div>
-</div>
-{include file='footer.tpl'}
+</div>{/strip}{include file='footer.tpl'}

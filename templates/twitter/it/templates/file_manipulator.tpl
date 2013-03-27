@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 {if isset($file_name)}
 <h2>Panoramica file:</h2>
@@ -22,4 +22,4 @@ Cambia password: <form action="index.php?action=file_manipulator&amp;action_file
 <a class="btn" href="index.php?action=file_manipulator&amp;action_file=visibility_change&amp;file={$file_new_name}">{if ($file_visibility == 'public')}Rendi il file privato{else}Rendi il file pubblico{/if}</a>
 {/if}
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}

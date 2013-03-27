@@ -1,4 +1,4 @@
-{include file='header.tpl'}
+{include file='header.tpl'}{strip}
 <div class="container">
 Registrati compilando il seguente form:<br/>
 <form method="post" action="index.php?action=register" name="regitration">
@@ -10,4 +10,4 @@ Registrati compilando il seguente form:<br/>
 <small>Tutti i campi sono obbligatori</small>
 </form>
 </div>
-{include file='footer.tpl'}
+{/strip}{include file='footer.tpl'}
