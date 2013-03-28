@@ -13,7 +13,7 @@
 
 <div class="container">
 <h1>Installer STEP 3/3</h1>
-<h3>Created database</h3>
+<h3>Create database</h3>
 <div class="alert <?php if($success) echo('alert-success'); else echo('alert-error'); ?>"><p>
 <?php 
 if($success)

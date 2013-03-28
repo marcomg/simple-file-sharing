@@ -13,7 +13,7 @@
 
 <div class="container">
 <h1>Installer STEP 2/3</h1>
-<h3>Created database</h3>
+<h3>File install</h3>
 
 <?php
 if($c_htaccess){
