@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Installer STEP 3/3</title>
+<title>Installer STEP 2/3</title>
 <link rel="icon" href="install/favicon.ico" />
 <link href="install/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script src="install/js/jquery.js"></script>
@@ -12,21 +12,22 @@
 <br/>
 
 <div class="container">
-<h1>Installer STEP 3/3</h1>
+<h1>Installer STEP 2/3</h1>
 <h3>Created database</h3>
-<div class="alert <?php if($success) echo('alert-success'); else echo('alert-error'); ?>"><p>
-<?php 
-if($success)
-echo('Database successfull installed! You can go to the next step!');
 
-else
-echo('Unknow error! Please install by hand the database! The sql file is in <em>./includes/mysql.database.sql</em>.');
-?>
-</p></div>
 <?php
-if($success)
-echo('<p class="text-right"><a class="btn btn-primary" href="install.php?clear=true">Clean the install file and go to the home page<i class="icon-arrow-right"></i></a></p>');
+if($c_htaccess){
+    echo('<div class="alert alert-success"><p>Files successful created, you can continue installing!</p></div>');
+}
+
+else{
+    echo('<div class="alert alert-error"><p>:-O you haven\'t read yet the install instructions, please read them and reload this page.</p></div>');
+}
 ?>
+
+<p class="text-right"><a class="btn btn-primary" href="install.php">Continue the wizard installing the database <i class="icon-arrow-right"></i></a></p>
+</div>
+
 
 <br/>
 <div class="container">

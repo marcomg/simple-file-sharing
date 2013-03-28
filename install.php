@@ -16,6 +16,10 @@ if(!file_exists(ROOT.'/includes/config.php')){
 elseif($_GET['clear']==true){
     $todo = 'clear';
 }
+// Controllo se esiste il file .htaccess in uploads/
+elseif(!file_exists(ROOT.'/uploads/.htaccess')){
+    $todo = 'make_files';
+}
 // Controllo se esiste il database
 elseif(file_exists(ROOT.'/includes/config.php')){
     $todo = 'make_database';
@@ -32,14 +36,18 @@ switch($todo){
         require(ROOT.'/install/make_config.tpl');
     break;
     
-    case 'make_database';
-        // Se non esiste già creo la cartella per gli uploads con il .htaccess
+    case 'make_files':
+        // Se non esiste già creo la cartella per gli uploads con il file .htaccess
         if(!file_exists(ROOT.'/upload/.htaccess')){
             mkdir(ROOT.'/uploads/', 0777);
             $htaccess = fopen(ROOT.'/uploads/.htaccess', 'w');
-            fwrite($htaccess, 'deny from all');
+            $c_htaccess = fwrite($htaccess, 'deny from all');
             fclose($htaccess);
         }
+        require(ROOT.'/install/make_files.tpl');
+    break;
+    
+    case 'make_database':
         require(ROOT.'/includes/config.php');
         $db = new MYSQL();
         if(sql_import(ROOT.'/includes/mysql.database.sql')){
@@ -51,7 +59,7 @@ switch($todo){
         require(ROOT.'/install/make_database.tpl');
     break;
     
-    case 'clear';
+    case 'clear':
         unlink(ROOT.'/install.php');
         header('Location: index.php');
     break;
