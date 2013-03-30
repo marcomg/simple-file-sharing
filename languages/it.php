@@ -63,5 +63,10 @@ Non sei autorizzato a scaricare!',
 
 'title_register_true' => 'Registrazione effettuata con successo',
 
-'title_register_false' => 'Registrazione non effettuata');
+'title_register_false' => 'Registrazione non effettuata',
+
+'title_update' => 'Controllo update',
+
+// Errori
+'error_check_updates' => 'Impossibile controllare gli aggiornamenti');
 ?>
