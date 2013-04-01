@@ -19,6 +19,7 @@ $query = $db->query('SELECT * FROM `files` WHERE `file_new_name` = \''.$_GET['fi
 $result = $db->fetch_array($query);
 
 if(empty($result)){
+    header("Status: 404 Not Found");
     $smarty->assign('error', $string['file_not_exist']);
     $smarty->display('download.tpl');
     exit;
