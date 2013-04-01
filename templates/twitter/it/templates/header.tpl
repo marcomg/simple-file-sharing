@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>{if isset($title)}{$title}{/if}</title>
+<title>{if isset($title)}{$title}{elseif isset($error)}{$error}{else}Unknow title{/if}</title>
 <link rel="icon" href="{$smarty.const.DIR_TEMPLATE_IMGS}/favicon.ico" />
 <link href="{$smarty.const.DIR_TEMPLATE_VAR}/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script src="{$smarty.const.DIR_TEMPLATE_VAR}/js/jquery.js"></script>
