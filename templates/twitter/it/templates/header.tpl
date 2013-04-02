@@ -20,15 +20,14 @@
 {* Menù perenne *}
 <li><a href="./">Home Page</a></li>
 
-{* Menù utente *}
 {if !isset($print_user_panel)}
-{* Questo menù appare solo a chi non ha effettuato il login *}
+{* Questo menù utente anonimo*}
 
 <li><a href="./index.php?action=register">Registrati</a></li><li><a href="./index.php?action=login">Login</a></li>
 
 {else}
 
-{* Questo solo a chi lo ha effettuato *}
+{* Manù utente loggiato *}
 
 <li><a href="./index.php?action=upload">Upload</a></li><li><a href="./index.php?action=file_browser">File Browser</a></li><li><a href="./index.php?action=ucp&amp;user_action=overview">Pannello di controllo utente</a></li><li><a href="./index.php?action=logout">Logout</a></li>
 
@@ -38,14 +37,25 @@
 </div>
 </div>
 <br/>
-
-{* Menù amministratore *}
-
 <br/>
 {if isset($error)}
 <div class="container">
 <div class="alert alert-error">
 <p class="text-error">{$error}</p>
+</div>
+</div>
+{/if}
+{if isset($success)}
+<div class="container">
+<div class="alert alert-success">
+<p class="text-error">{$success}</p>
+</div>
+</div>
+{/if}
+{if isset($info)}
+<div class="container">
+<div class="alert alert-info">
+<p class="text-error">{$info}</p>
 </div>
 </div>
 {/if}
