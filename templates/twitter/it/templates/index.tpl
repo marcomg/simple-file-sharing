@@ -1,7 +1,5 @@
 {include file='header.tpl'}{strip}
 <div class="container">
-<br/>
-<div class="container">
 <p>
 Questo è un programma scritto in php per il file hosting. La registrazione è stata disabilitata poiché questo portale serve solo per testare il programma.
 </p>
@@ -14,5 +12,4 @@ Il programma è rilasciato sotto licenza gplv3, se sei interessato a visionarne 
 <b>Per poter caricare file o condividerli bisogna registrarsi. Una volta effettuato il login si avrà accesso ad un menù che permetterà di accedere alle funzionalità di upload</b>
 </p>
 
-</div>
 </div>{/strip}{include file='footer.tpl'}
