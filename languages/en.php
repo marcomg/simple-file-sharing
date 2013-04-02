@@ -68,6 +68,8 @@ You are not authorized to download!',
 
 'title_update' => 'Check updates',
 
+'title_acp' => 'Admin control panel',
+
 // Errors
 'error_check_updates' => 'It is impossible to check updates');
 ?>

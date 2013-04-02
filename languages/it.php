@@ -67,6 +67,8 @@ Non sei autorizzato a scaricare!',
 
 'title_update' => 'Controllo update',
 
+'title_acp' => 'Pannello di controllo amministratore',
+
 // Errori
 'error_check_updates' => 'Impossibile controllare gli aggiornamenti');
 ?>

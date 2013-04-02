@@ -63,6 +63,7 @@ switch($_GET['admin_action']){
     break;
     
     case 'overview':
+        $smarty->assign('title', $string['title_acp']);
         $smarty->display('acp.tpl');
     break;
     

@@ -23,19 +23,22 @@
 {if !isset($print_user_panel)}
 {* Questo menù utente anonimo*}
 
-<li><a href="./index.php?action=register">Registrati</a></li><li><a href="./index.php?action=login">Login</a></li>
+<li><a href="./index.php?action=register">Registrati</a></li>
+<li><a href="./index.php?action=login">Login</a></li>
 
 {else}
 
 {* Manù utente loggiato *}
 
-<li><a href="./index.php?action=upload">Upload</a></li><li><a href="./index.php?action=file_browser">File Browser</a></li><li class="dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Utente<b class="caret"></b></a>
-<ul class="dropdown-menu">
-<li><a href="index.php?action=ucp&amp;user_action=overview">Pannello di controllo utente</a></li>
-<li class="divider"></li>
-<li><a href="index.php?action=logout">Logout</a></li>
-</ul>
+<li><a href="./index.php?action=upload">Upload</a></li>
+<li><a href="./index.php?action=file_browser">File Browser</a></li>
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Utente<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        <li><a href="index.php?action=ucp&amp;user_action=overview">Pannello di controllo utente</a></li>
+        <li class="divider"></li>
+        <li><a href="index.php?action=logout">Logout</a></li>
+    </ul>
 </li>
 
 {/if}
@@ -47,23 +50,23 @@
 <br/>
 {if isset($error)}
 <div class="container">
-<div class="alert alert-error">
-<p class="text-error">{$error}</p>
-</div>
+    <div class="alert alert-error">
+        <p class="text-error">{$error}</p>
+    </div>
 </div>
 {/if}
 {if isset($success)}
 <div class="container">
-<div class="alert alert-success">
-<p class="text-error">{$success}</p>
-</div>
+    <div class="alert alert-success">
+        <p class="text-error">{$success}</p>
+    </div>
 </div>
 {/if}
 {if isset($info)}
 <div class="container">
-<div class="alert alert-info">
-<p class="text-error">{$info}</p>
-</div>
+    <div class="alert alert-info">
+        <p class="text-error">{$info}</p>
+    </div>
 </div>
 {/if}
 <br/>
