@@ -14,6 +14,11 @@ if(!$user){
     exit;
 }
 
+// Setto i giusti menù
+if($user['rule'] == 'admin'){
+    $smarty->assign('print_admin_panel', 'true');
+}
+
 switch($_GET['action_file']){
     case 'delete':
         $query = $db->query('SELECT * FROM `files` WHERE `idu` = '.$user['idu'].' AND `file_new_name` = \''.$db->escape_string($_GET['file']).'\'');        

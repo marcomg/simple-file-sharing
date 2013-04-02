@@ -1,6 +1,4 @@
 <?php
-
-
 $user = $login->whois_logged();
 
 if($user != false){
@@ -15,6 +13,11 @@ if(!$user){
     exit;
 }
 
+
+// Setto i giusti menù
+if($user['rule'] == 'admin'){
+    $smarty->assign('print_admin_panel', 'true');
+}
 
 // Se non è settato il post allora stampo il form
 if(!isset($_POST['visibility']) or !isset($_FILES['file'])){

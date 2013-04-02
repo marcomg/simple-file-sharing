@@ -14,6 +14,11 @@ if(!$user){
     exit;
 }
 
+// Setto i giusti menù
+if($user['rule'] == 'admin'){
+    $smarty->assign('print_admin_panel', 'true');
+}
+
 // Prendo tutti i file dell'utente
 $query = $db->query('SELECT * FROM `files` WHERE `idu` = '.$user['idu'].' ORDER BY `file_name` ASC');
 

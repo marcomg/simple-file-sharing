@@ -14,6 +14,11 @@ if(!$user){
     exit;
 }
 
+// Setto i giusti menù
+if($user['rule'] == 'admin'){
+    $smarty->assign('print_admin_panel', 'true');
+}
+
 // A seconda dell'azione settata la eseguo
 switch($_GET['user_action']){
     case 'change_password':

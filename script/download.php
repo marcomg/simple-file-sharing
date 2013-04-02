@@ -5,6 +5,11 @@ if($user != false){
     $smarty->assign('print_user_panel', 'true');
 }
 
+// Setto i giusti menù
+if($user['rule'] == 'admin'){
+    $smarty->assign('print_admin_panel', 'true');
+}
+
 // Se non è settato alcun file da scaricare stampo un errore.
 if(!isset($_GET['file']) or empty($_GET['file'])){
     $smarty->assign('error', $string['file_not_isset']);
