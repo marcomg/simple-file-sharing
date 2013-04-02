@@ -29,7 +29,14 @@
 
 {* Manù utente loggiato *}
 
-<li><a href="./index.php?action=upload">Upload</a></li><li><a href="./index.php?action=file_browser">File Browser</a></li><li><a href="./index.php?action=ucp&amp;user_action=overview">Pannello di controllo utente</a></li><li><a href="./index.php?action=logout">Logout</a></li>
+<li><a href="./index.php?action=upload">Upload</a></li><li><a href="./index.php?action=file_browser">File Browser</a></li><li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown">Utente<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li><a href="index.php?action=ucp&amp;user_action=overview">Pannello di controllo utente</a></li>
+<li class="divider"></li>
+<li><a href="index.php?action=logout">Logout</a></li>
+</ul>
+</li>
 
 {/if}
 </ul>
