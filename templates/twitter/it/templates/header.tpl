@@ -37,24 +37,27 @@
                     </button>
                     <a class="brand" href="https://code.google.com/p/simple-file-sharing/">simple-file-sharing</a>
                     <div class="nav-collapse collapse">
-                        <ul class="nav">
 {* Menù perenne *}
+                        <ul class="nav">
                             <li><a href="./"><i class="icon-home"></i> Home Page</a></li>
-
+                        </ul>
+                        
 {if !isset($print_user_panel)}
 {* Questo menù utente anonimo*}
-
-                            <li><a href="./index.php?action=register"><i class="icon-pencil"></i> Registrati</a></li>
+                        <ul class="nav pull-right">
                             <li><a href="./index.php?action=login"><i class="icon-eye-open"></i> Login</a></li>
-
+                            <li><a href="./index.php?action=register"><i class="icon-pencil"></i> Registrati</a></li>
+                        </ul>
 {else}
 
 {* Manù utente loggiato *}
-
+                        <ul class="nav">
                             <li><a href="./index.php?action=upload"><i class="icon-upload"></i> Upload</a></li>
                             <li><a href="./index.php?action=file_browser"><i class="icon-folder-open"></i> File Browser</a></li>
+                        </ul>
                     <!-- NAVBAR 2
                         ================================================== -->
+                        <ul class="nav pull-right">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Utente<b class="caret"></b></a><!-- aggiungere  icon-white?? -->
                                 <ul class="dropdown-menu">
@@ -63,9 +66,8 @@
                                     <li><a href="index.php?action=logout">Logout</a></li>
                                 </ul>
                             </li>
-
-{/if}
                         </ul>
+{/if}
                     </div><!--/.nav-collapse -->
                 </div>
             </div>
