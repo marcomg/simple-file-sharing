@@ -73,28 +73,56 @@ function return_human_value($val){
     if($val >= 1024){
         $val = $val/1024;
         if($val < 1024){
-            return(round($val, 1).'KB');
+            return(round($val, 1).'KiB');
         }
     }
     
     if($val >= 1024){
         $val = $val/1024;
         if($val < 1024){
-            return(round($val, 1).'MB');
+            return(round($val, 1).'MiB');
         }
     }
     
     if($val >= 1024){
         $val = $val/1024;
         if($val < 1024){
-            return(round($val, 1).'GB');
+            return(round($val, 1).'GiB');
         }
     }
     
     if($val >= 1024){
         $val = $val/1024;
         if($val < 1024){
-            return(round($val, 1).'TB');
+            return(round($val, 1).'TiB');
+        }
+    }
+    
+    if($val >= 1024){
+        $val = $val/1024;
+        if($val < 1024){
+            return(round($val, 1).'PiB');
+        }
+    }
+    
+    if($val >= 1024){
+        $val = $val/1024;
+        if($val < 1024){
+            return(round($val, 1).'EiB');
+        }
+    }
+    
+    if($val >= 1024){
+        $val = $val/1024;
+        if($val < 1024){
+            return(round($val, 1).'ZiB');
+        }
+    }
+    
+    if($val >= 1024){
+        $val = $val/1024;
+        if($val < 1024){
+            return(round($val, 1).'YiB');
         }
     }
     
