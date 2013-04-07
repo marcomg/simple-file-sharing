@@ -5,9 +5,8 @@ if(isset($_POST['username']) and isset($_POST['username']) and !empty($_POST['us
 	// Se il login non è valido stampo il l'errore
 	if(!$login->login($_POST['username'], $_POST['password'])){
 		$smarty->assign('error', $string['error_incorrect_username_or_password']);
-        $smarty->assign('title', $string['title_login_false']);
-		$smarty->display('header.tpl');
-		$smarty->display('footer.tpl');
+        	$smarty->assign('title', $string['title_login_false']);
+		$smarty->display('login_form_login.tpl');
 		exit;
 	}
 
