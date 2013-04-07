@@ -12,10 +12,10 @@ CREATE TABLE IF NOT EXISTS `files` (
   KEY `idu` (`idu`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
-DROP TABLE IF EXISTS `logins`;
-CREATE TABLE IF NOT EXISTS `logins` (
-  `idl` int(11) NOT NULL AUTO_INCREMENT,
-  `idl_casual` text COLLATE utf8_unicode_ci NOT NULL,
+DROP TABLE IF EXISTS `sessions`;
+CREATE TABLE IF NOT EXISTS `sessions` (
+  `ids` int(11) NOT NULL AUTO_INCREMENT,
+  `ids_casual` text COLLATE utf8_unicode_ci NOT NULL,
   `idu` int(11) NOT NULL,
   `ip` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idl`)

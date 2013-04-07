@@ -69,8 +69,8 @@ var $n_string = 16;
 
 		$ip = $_SERVER['REMOTE_ADDR'];
 		if($result['username'] == $username and $result['password'] == $password){
-			$result = $this->db->query("INSERT INTO `logins` (`idl`, `idl_casual`, `idu`, `ip`) VALUES (NULL, '$string', '$idu', '$ip')");
-			setcookie("idl_casual", "$string", time() + 31536000);
+			$result = $this->db->query("INSERT INTO `sessions` (`ids`, `ids_casual`, `idu`, `ip`) VALUES (NULL, '$string', '$idu', '$ip')");
+			setcookie("ids_casual", "$string", time() + 31536000);
 			return true;
 		}
 
@@ -81,15 +81,15 @@ var $n_string = 16;
 	}
 
 	function is_logged(){
-		if(!isset($_COOKIE['idl_casual']) or is_null($_COOKIE['idl_casual'])){
+		if(!isset($_COOKIE['ids_casual']) or is_null($_COOKIE['ids_casual'])){
 			return false;
 		}
 
-		$idl_casual = $this->db->escape_string($_COOKIE['idl_casual']);
-		$result = $this->db->query("SELECT * FROM `logins` WHERE `idl_casual` = '$idl_casual'");
+		$ids_casual = $this->db->escape_string($_COOKIE['ids_casual']);
+		$result = $this->db->query("SELECT * FROM `sessions` WHERE `ids_casual` = '$ids_casual'");
 
 		$result = $this->db->fetch_assoc($result);
-		if(is_null($result['idl_casual'])){
+		if(is_null($result['ids_casual'])){
 			return false;
 		}
 
@@ -105,15 +105,15 @@ un array con(idu, username, password, rule)
 */
 	function whois_logged(){
         // Controllo se sono settati correttamente i cookies. In caso contrario ritorno falso
-        if(!isset($_COOKIE['idl_casual']) or is_null($_COOKIE['idl_casual'])){
+        if(!isset($_COOKIE['ids_casual']) or is_null($_COOKIE['ids_casual'])){
 			return false;
         }
         
         // Controllo se l'utente è loggiato
-		$idl_casual = $this->db->escape_string($_COOKIE['idl_casual']);
-		$result = $this->db->query("SELECT * FROM `logins` WHERE `idl_casual` = '$idl_casual'");
+		$ids_casual = $this->db->escape_string($_COOKIE['ids_casual']);
+		$result = $this->db->query("SELECT * FROM `sessions` WHERE `ids_casual` = '$ids_casual'");
 		$result = $this->db->fetch_assoc($result);
-		if(is_null($result['idl_casual'])){
+		if(is_null($result['ids_casual'])){
 			return false;
 		}
 		/*else{
@@ -133,8 +133,8 @@ un array con(idu, username, password, rule)
 	function logout(){
 		$result = $this->whois_logged();
 		$result = $result['idu'];
-		setcookie('idl_casual');
-		$this->db->query("DELETE FROM `logins` WHERE `idu` = $result;");
+		setcookie('ids_casual');
+		$this->db->query("DELETE FROM `sessions` WHERE `idu` = $result;");
 		//return true;
 	}
 }
