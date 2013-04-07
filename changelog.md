@@ -1,5 +1,8 @@
 [TOC]
 # 1.0 branch #
+## 1.0.6-beta ##
+* Mobile support added
+* Templates are optimized
 ## 1.0.5-beta ##
 * Suitable for binary prefix standards
 ## 1.0.4-beta ##
