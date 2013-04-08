@@ -2,6 +2,7 @@
 define('ROOT', getcwd());
 
 require(ROOT.'/includes/config.php');
+require(ROOT.'/includes/classes/mysql.class.php');
 
 $db = new MYSQL();
 
@@ -14,7 +15,7 @@ $db->query('CREATE TABLE IF NOT EXISTS `sessions` (
   `ids_casual` text COLLATE utf8_unicode_ci NOT NULL,
   `idu` int(11) NOT NULL,
   `ip` text COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`idl`)
+  PRIMARY KEY (`ids`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;');
 
 // Cancello il file

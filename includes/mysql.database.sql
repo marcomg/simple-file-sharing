@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS `sessions` (
   `ids_casual` text COLLATE utf8_unicode_ci NOT NULL,
   `idu` int(11) NOT NULL,
   `ip` text COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`idl`)
+  PRIMARY KEY (`ids`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 DROP TABLE IF EXISTS `users`;
