@@ -1,7 +1,11 @@
 [TOC]
 # 1.1 branch #
+## 1.1.3-beta ##
+* Corrected bugs in database installer and updater
+
 ## 1.1.2-beta ##
 * Corrected various bugs
+
 ## 1.1.1-beta ##
 * Added control for downloading by cookies and database
 * Added database downloads tabel

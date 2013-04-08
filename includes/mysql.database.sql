@@ -29,3 +29,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `rule` text COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idu`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `downloads` (
+  `idd` int(11) NOT NULL AUTO_INCREMENT,
+  `idu` int(11) NOT NULL,
+  `idf` int(11) NOT NULL,
+  `idfcd` text COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`idd`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
