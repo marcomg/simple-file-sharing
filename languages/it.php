@@ -70,5 +70,7 @@ Non sei autorizzato a scaricare!',
 'title_acp' => 'Pannello di controllo amministratore',
 
 // Errori
-'error_check_updates' => 'Impossibile controllare gli aggiornamenti');
+'error_check_updates' => 'Impossibile controllare gli aggiornamenti',
+
+'error_file_cookie_wrong' => 'Errore: il cookie del file non è settato e non ti è permesso scaricare il file');
 ?>

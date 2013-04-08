@@ -71,5 +71,7 @@ You are not authorized to download!',
 'title_acp' => 'Admin control panel',
 
 // Errors
-'error_check_updates' => 'It is impossible to check updates');
+'error_check_updates' => 'It is impossible to check updates',
+
+'error_file_cookie_wrong' => 'Error: file cookie isn\'t isset and you aren\'t allowed to download required file');
 ?>

@@ -19,4 +19,22 @@ function space_occuped($user_idu){
     }
     return($space_occuped);
 }
+
+/*
+Questa funzione genera una id casuale per il download di un file
+*/
+function generate_idfcd($idu, $idf){
+    global $db;
+    $while = true;
+    while($while){
+        $idfcd = string_gen(LONG_FILE_NAME);
+        $result = $db->query("SELECT * FROM `downloads` WHERE `idfcd` = '$idfcd'");
+        $result = $db->fetch_array($result);
+        if(empty($result['idd'])){
+            $while = false;
+        }
+    }
+    $db->query("INSERT INTO `downloads` (`idd`, `idu`, `idf`, `idfcd`) VALUES (NULL, $idu, $idf, '$idfcd');");
+    return($idfcd);
+}
 ?>

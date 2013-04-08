@@ -53,22 +53,38 @@ if(!isset($_GET['info']) or empty($_GET['info']) or $_GET['info'] == 'yes'){
     if(!empty($result['file_password'])){
         $smarty->assign('password_form', 'yes');
     }
+    
+    // Setto i cookies per autorizzare il download
+    $idfcd = generate_idfcd($user['idu'], $result['idf']);
+    setcookie('idfcd', $idfcd, time() + 3600);
+    
     $smarty->assign('file_name', $result['file_name']);
     $smarty->assign('file_size', return_human_value($result['file_size']));
     $smarty->assign('file_new_name', $result['file_new_name']);
 }
 
 if(isset($_GET['info']) and $_GET['info'] == 'no'){
-    if(!empty($result['file_password']) and isset($_POST['password']) and $result['file_password'] == $_POST['password']){
+    // Se la password è giusta e richiesta posso scaricare oppure non è richiesta
+    if(!empty($result['file_password']) and isset($_POST['password']) and $result['file_password'] == $_POST['password'] or empty($result['file_password'])){
         $can_download = 'yes';
     }
+    // Altrimenti no
     else{
         $can_download = 'no';
         $smarty->assign('error', $string['file_password_wrong']);
     }
-    if(empty($result['file_password'])){
+    
+    // Se non sono settati giustamente i cookies per il download non faccio scaricare
+    $_ = $db->query("SELECT * FROM `downloads` WHERE `idfcd` = '".$db->escape_string($_COOKIE['idfcd'])."'");
+    $_ = $db->fetch_array($_);
+    if(!empty($_['idf']) and $_['idf']==$result['idf'] and $_['idu']==$user['idu']){
         $can_download = 'yes';
     }
+    else{
+        $can_download = 'no';
+        $smarty->assign('error', $string['error_file_cookie_wrong']);
+    }
+    
 }
 if(isset($can_download) and $can_download == 'yes'){    
     header('Cache-Control: public');
@@ -77,7 +93,7 @@ if(isset($can_download) and $can_download == 'yes'){
     header('Content-Disposition: attachment; filename= "' . $result['file_name'] . '"');
     header('Content-Length: '.$result['file_size']);
     header('Content-Transfer-Encoding: binary');
-    readfile(ROOT.'/uploads/'.$_GET['file']);
+    readfile(ROOT.'/uploads/'.$result['file_new_name']);
     exit;
 }
 $smarty->assign('title', $string['title_download']);
