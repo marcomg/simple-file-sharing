@@ -34,7 +34,21 @@ function generate_idfcd($idu, $idf){
             $while = false;
         }
     }
+    if(empty($idu)){
+        $idu = -1;
+    }
+
     $db->query("INSERT INTO `downloads` (`idd`, `idu`, `idf`, `idfcd`) VALUES (NULL, $idu, $idf, '$idfcd');");
     return($idfcd);
+}
+
+/*
+Questa funzione scrive gli errori gravi
+*/
+function panic($panic){
+    $f = fopen(ROOT.'/includes/panic.log', 'a');
+    fwrite($f, $panic.PHP_EOL);
+    fclose($f);
+    die($panic);
 }
 ?>

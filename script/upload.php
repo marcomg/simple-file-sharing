@@ -89,11 +89,12 @@ if(move_uploaded_file($_FILES['file']['tmp_name'], ROOT.'/uploads/'.$filename)){
     $smarty->assign('title', $string['title_upload']);
     
     $smarty->display('upload.tpl');
+    
+    exit;
 }
 
 /*Se arrivo qui si è verificato un errore molto grave:
 il server non è riuscito a spostare il file.
-Per ora non mi preoccupo di segnalare l'errore.
-In seguito, forse, me ne occuperò.
 */
+panic("Fatal error at line:".__LINE__." in file:".__FILE__.": can't move uploaded file witch has this name: $filename");
 ?>

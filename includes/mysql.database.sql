@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`idu`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+DROP TABLE IF EXISTS `downloads`;
 CREATE TABLE IF NOT EXISTS `downloads` (
   `idd` int(11) NOT NULL AUTO_INCREMENT,
   `idu` int(11) NOT NULL,
