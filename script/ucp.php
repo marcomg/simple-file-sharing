@@ -8,7 +8,7 @@ if($user != false){
 
 // Controllo se è loggiato se no stampo un errore!
 if(!$user){
-    $smarty->assign('error', $string['access_denied'].' '.$string['required_login']);
+    $smarty->assign('error', _('Error: you do not have permission to access this page').' '._('Login!'));
     $smarty->display('header.tpl');
     $smarty->display('footer.tpl');
     exit;
@@ -60,7 +60,7 @@ switch($_GET['user_action']){
     
 }
 
-$smarty->assign('title', $string['title_ucp']);
+$smarty->assign('title', _('User control panel'));
 
 $smarty->display('ucp.tpl');
 ?>

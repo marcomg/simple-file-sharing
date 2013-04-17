@@ -12,7 +12,7 @@ if($user['rule'] == 'admin'){
 
 // Se non è settato alcun file da scaricare stampo un errore.
 if(!isset($_GET['file']) or empty($_GET['file'])){
-    $smarty->assign('error', $string['file_not_isset']);
+    $smarty->assign('error', _('Error, the link that you entered does not contain the file ID!'));
     $smarty->display('download.tpl');
     exit;
 }
@@ -26,7 +26,7 @@ $result = $db->fetch_array($query);
 // Se il file non è stato trevato stampo errore 404
 if(empty($result)){
     header("Status: 404 Not Found");
-    $smarty->assign('error', $string['file_not_exist']);
+    $smarty->assign('error', _('Error, the file you are trying to download does not exist.'));
     $smarty->display('download.tpl');
     exit;
 }
@@ -43,14 +43,14 @@ $file_visibility = $result['file_visibility'];
 
 // Se il file è salvato come privato e chi lo sta scaricando non è il proprietario blocco il download
 if($file_visibility == 'private' and $file_idu != $user['idu']){
-    $smarty->assign('error', $string['downloader_not_proprietary']);
+    $smarty->assign('error', _('Error, this file can be downloaded only by the owner. You are not authorized to download it.'));
     $smarty->display('download.tpl');
     exit;
 }
 
 // Controllo per sicurezza che il file esista, se non esiste il database non è integro
 if(!file_exists(ROOT.'/uploads/'.$file_casual_id)){
-    $smarty->assign('error', $string['error_integry_database']);
+    $smarty->assign('error', _('Fatal error: The database is not healthy!'));
     $smarty->display('download.tpl');
     exit;
 }
@@ -82,7 +82,7 @@ if(isset($_GET['info']) and $_GET['info'] == 'no'){
     // Altrimenti no
     else{
         $can_download = 'no';
-        $smarty->assign('error', $string['file_password_wrong']);
+        $smarty->assign('error', _('Fails, the password set by the person who provided the file download is not installed or is wrong. <br/>You are not authorized to download!'));
     }
     
     // Se non sono settati giustamente i cookies per il download non faccio scaricare
@@ -93,7 +93,7 @@ if(isset($_GET['info']) and $_GET['info'] == 'no'){
     }
     else{
         $can_download = 'no';
-        $smarty->assign('error', $string['error_file_cookie_wrong']);
+        $smarty->assign('error', _('Error: file cookie isn\'t isset and you aren\'t allowed to download required file'));
     }
     
 }
@@ -107,6 +107,6 @@ if(isset($can_download) and $can_download == 'yes'){
     readfile(ROOT.'/uploads/'.$file_casual_id);
     exit;
 }
-$smarty->assign('title', $string['title_download']);
+$smarty->assign('title', _('Download'));
 $smarty->display('download.tpl');
 ?>

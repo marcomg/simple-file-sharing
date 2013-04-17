@@ -1,0 +1,167 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Marco Guerrini <marcomg@cryptolab.net>, 2013.
+#
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: 1POT-Creation-Date: 2013-04-17 19:34+0200\n"
+"PO-Revision-Date: 2013-04-17 19:48+0200\n"
+"Last-Translator: Marco Guerrini <marcomg@cryptolab.net>\n"
+"Language-Team: Italiano <>\n"
+"Language: ItalianPlural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: script/acp.php:11 script/acp.php:19 script/file_browser.php:11
+#: script/file_manipulator.php:11 script/ucp.php:11 script/upload.php:10
+msgid "Error: you do not have permission to access this page"
+msgstr "Errore: non hai i permessi per accedere a questa pagina"
+
+#: script/acp.php:11 script/file_browser.php:11 script/file_manipulator.php:11
+#: script/ucp.php:11 script/upload.php:10
+msgid "Login!"
+msgstr "Effettua il login!"
+
+#: script/acp.php:32
+msgid "Check updates"
+msgstr "Controllo update"
+
+#: script/acp.php:42
+msgid "It is impossible to check updates"
+msgstr "Impossibile controllare gli aggiornamenti"
+
+#: script/acp.php:66
+msgid "Admin control panel"
+msgstr "Pannello di controllo amministratore"
+
+#: script/download.php:15
+msgid "Error, the link that you entered does not contain the file ID!"
+msgstr "Errore, il link che hai digitato non contiene l'ID del file!"
+
+#: script/download.php:29
+msgid "Error, the file you are trying to download does not exist."
+msgstr "Errore, il file che stai cercando di scaricare non esiste."
+
+#: script/download.php:46
+msgid ""
+"Error, this file can be downloaded only by the owner. You are not authorized "
+"to download it."
+msgstr ""
+"Errore, questo file può essere scaricato solamente del proprietario. Non sei "
+"autorizzato a scaricarlo."
+
+#: script/download.php:53
+msgid "Fatal error: The database is not healthy!"
+msgstr "Errore fatale: il database non è integro!"
+
+#: script/download.php:85
+msgid ""
+"Fails, the password set by the person who provided the file download is not "
+"installed or is wrong. <br/>You are not authorized to download!"
+msgstr ""
+"Errore, la password fissata da chi ha previsto il download del file non è "
+"stata inserita o è sbagliata.<br/> Non sei autorizzato a scaricare!"
+
+#: script/download.php:96
+msgid ""
+"Error: file cookie isn't isset and you aren't allowed to download required "
+"file"
+msgstr ""
+"Errore: il cookie del file non è settato e non ti è permesso scaricare il "
+"file"
+
+#: script/download.php:110
+msgid "Download"
+msgstr "Scarica"
+
+#: script/errors.php:16
+msgid "Error 404"
+msgstr "Errore 404"
+
+#: script/file_browser.php:56
+msgid "File browser"
+msgstr "File browser"
+
+#: script/file_manipulator.php:93
+msgid "Error, the file that you tried was not found."
+msgstr "Errore, il file che hai cercato non è stato trovato."
+
+#: script/file_manipulator.php:112
+msgid "File overview"
+msgstr "Panoramica file"
+
+#: script/index.php:13
+msgid "Home Page"
+msgstr "Pagina principale"
+
+#: script/login.php:7
+msgid "Error: username or password is incorrect"
+msgstr "Errore: username o password errati"
+
+#: script/login.php:8
+msgid "Login wrong"
+msgstr "Login errato"
+
+#: script/login.php:15
+msgid "Login successful"
+msgstr "Login successo"
+
+#: script/login.php:22
+msgid "Login"
+msgstr "Entra"
+
+#: script/logout.php:6
+msgid "Logout"
+msgstr "Esci"
+
+#: script/register.php:3
+msgid "Error, registration has been disabled."
+msgstr "Errore, la registrazione è stata disabilitata."
+
+#: script/register.php:4 script/register.php:30
+msgid "Register"
+msgstr "Registrati"
+
+#: script/register.php:14
+msgid ""
+"There was an error:<br/><ul><li>check that you have entered all the fields;</"
+"li><li>Could it be that the username you specified has already been used by "
+"someone else, try a different one!</li></ul>"
+msgstr ""
+"Si è verificato un errore:<br/><ul><li>controlla di aver inserito tutti i "
+"campi;</li><li>potrebbe darsi che l\\'username da te specificato sia già "
+"stato utilizzato da qualcun\\'altro, prova con uno differente!</li></ul><br/>"
+
+#: script/register.php:15
+msgid "Registration is not carried out"
+msgstr "Registrazione non effettuata"
+
+#: script/register.php:23
+msgid "Registered successfully"
+msgstr "Registrazione effettuata con successo"
+
+#: script/ucp.php:63
+msgid "User control panel"
+msgstr "Pannello di controllo utente"
+
+#: script/upload.php:25 script/upload.php:89
+msgid "Upload"
+msgstr "Carica"
+
+#: script/upload.php:33
+msgid "There was an error while uploading the file."
+msgstr "Si è verificato un errore durante il caricamento del file."
+
+#: script/upload.php:41
+msgid "Error, the file is too big!"
+msgstr "Errore, il file è troppo grande!"
+
+#: script/upload.php:58
+msgid "Error, you have exceeded the maximum number of files. Delete something!"
+msgstr ""
+"Errore, hai superato il limite massimo di quantità di file. Cancella "
+"qualcosa!"

@@ -9,6 +9,7 @@ require(ROOT.'/includes/functions/various_functions.php');
 require(ROOT.'/includes/functions/script_functions.php');
 require(ROOT.'/includes/classes/login_manager.class.php');
 require(ROOT.'/includes/classes/smarty/Smarty.class.php');
+require(ROOT.'/includes/classes/gettext/gettext.inc');
 
 // Dichiaro le classi
 $db = new MYSQL();
@@ -18,8 +19,11 @@ $smarty = new Smarty();
 // Includo il file per la configurazione di smarty
 require(ROOT.'/includes/config_smarty.php');
 
-// Includo il file per la traduzione di avvisi ed errori
-include(ROOT.'/languages/'.LANGUAGE.'.php');
+// GETTEXT
+T_setlocale(LC_MESSAGES, $locale);
+$domain = 'messages';
+bindtextdomain($domain, LOCALE_DIR);
+textdomain($domain);
 
 // Includo il file di commons. Contiene molte cose tra cui la traduzione in byte di alcune variabili nel file di configurazione.
 require(ROOT.'/includes/commons.php');

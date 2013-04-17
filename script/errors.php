@@ -13,7 +13,7 @@ if($user['rule'] == 'admin'){
 switch($_GET['error']){
     case '404':
         header("Status: 404 Not Found");
-        $smarty->assign('title', $string['404_title']);
+        $smarty->assign('title', _('Error 404'));
         $smarty->display('error404.tpl');
     break;
     

@@ -8,7 +8,7 @@ if($user != false){
 
 // Controllo se è loggiato se no stampo un errore!
 if(!$user){
-    $smarty->assign('error', $string['access_denied'].' '.$string['required_login']);
+    $smarty->assign('error', _('Error: you do not have permission to access this page').' '._('Login!'));
     $smarty->display('header.tpl');
     $smarty->display('footer.tpl');
     exit;
@@ -90,7 +90,7 @@ switch($_GET['action_file']){
     case 'overview':
         $query = $db->query('SELECT * FROM `files` WHERE `idu` = '.$user['idu'].' AND `file_new_name` = \''.$db->escape_string($_GET['file']).'\'');        
         if(empty($query)){
-            $smarty->assign('error', $string['file_not_found']);
+            $smarty->assign('error', _('Error, the file that you tried was not found.'));
             break;
         }
         $result = $db->fetch_array($query);//idf, idu, file_name, file_size, file_type, file_new_name, file_password, file_visibility
@@ -109,7 +109,7 @@ switch($_GET['action_file']){
         exit;
     break;
 }
-$smarty->assign('title', $string['title_file_overview']);
+$smarty->assign('title', _('File overview'));
 
 $smarty->display('file_manipulator.tpl');
 
