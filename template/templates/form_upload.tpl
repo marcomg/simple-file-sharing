@@ -8,19 +8,19 @@
             </script>
 
             <form class="form-horizontal" action="index.php?action=upload" method="post" enctype="multipart/form-data" onsubmit="return onSubmitButton()">
-                <label>Visibilità file:</label>
+                <label>{t}File visibility{/t}:</label>
                 <select name="visibility">
-                    <option value="public">Pubblico</option>
-                    <option value="private">Privato</option>
+                    <option value="public">{t}Public{/t}</option>
+                    <option value="private">{t}Private{/t}</option>
                 </select>
 
-                <label>File (dimensione max: {$max_file_size}):</label>
+                <label>{t 1=$max_file_size}File (max size: %1){/t}:</label>
                 <input type="file" name="file" />
-                <label>Password:</label>
+                <label>{t}Password{/t}:</label>
                 <input type="password" name="password" />
                 <div id="submitButtonDiv">
                     <label></label>
-                    <input class = "btn btn-primary" type="submit" name="submit" value="Upload" id="submitButton"/>
+                    <input class = "btn btn-primary" type="submit" name="submit" value="{t}Upload{/t}" id="submitButton"/>
                 </div>
 
                 <div id="progressBar" style="display:none">

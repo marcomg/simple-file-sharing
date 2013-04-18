@@ -2,7 +2,7 @@
 // Questo è il file di configurazione di smarty
 
 $smarty->template_dir = DIR_TEMPLATE.'/templates/';// La cartella dei template
-$smarty->compile_dir = DIR_TEMPLATE.'/templates_c/';// La cartella di compilazione
+$smarty->compile_dir = DIR_TEMPLATE.'/compiles/';// La cartella di compilazione
 $smarty->config_dir = DIR_TEMPLATE.'/configs/';// La cartella di configurazione
 $smarty->cache_dir = DIR_TEMPLATE.'/cache/';// La cartella delle cache
 //$smarty->debugging = true;// Debug smarty

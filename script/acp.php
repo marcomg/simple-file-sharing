@@ -29,7 +29,7 @@ if($user['rule'] == 'admin'){
 
 switch($_GET['admin_action']){
     case 'check_for_updates':
-        $smarty->assign('title', _('Check updates'));
+        $smarty->assign('title', _('Check for updates'));
         
         // Prelevo la nostra versione
         $_ = file(ROOT.'/version.txt');
@@ -39,7 +39,7 @@ switch($_GET['admin_action']){
         $_ = file('https://bitbucket.org/marcomg/simple-file-sharing/raw/master/version.txt');
         
         if(!$_){
-            $smarty->assign('error', _('It is impossible to check updates'));
+            $smarty->assign('error', _('It is impossible to check for updates'));
             $version = 0;
         }
         else{
