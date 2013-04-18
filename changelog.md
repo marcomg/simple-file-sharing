@@ -1,4 +1,10 @@
 [TOC]
+# 1.2 branch #
+## 1.2.1-beta ##
+* Removed AES library because we didn't use it
+* Using gettext for locale
+* Using only one template
+
 # 1.1 branch #
 ## 1.1.3-beta ##
 * Corrected bugs in database installer and updater
