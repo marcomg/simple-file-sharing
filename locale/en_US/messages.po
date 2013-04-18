@@ -1,0 +1,482 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Marco Guerrini <marcomg@cryptolab.net>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-18 13:56+0200\n"
+"PO-Revision-Date: 2013-04-18 14:46+0200\n"
+"Last-Translator: Marco Guerrini <marcomg@cryptolab.net>\n"
+"Language-Team: Italiano <>\n"
+"Language: Italian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.5\n"
+
+#: script/acp.php:11 script/acp.php:19 script/file_browser.php:11
+#: script/file_manipulator.php:11 script/ucp.php:11 script/upload.php:10
+msgid "Error: you do not have permission to access this page"
+msgstr "Error: you do not have permission to access this page"
+
+#: script/acp.php:11 script/file_browser.php:11 script/file_manipulator.php:11
+#: script/ucp.php:11 script/upload.php:10
+msgid "Login!"
+msgstr "Login!"
+
+#: script/acp.php:32 template.php:12
+msgid "Check for updates"
+msgstr "Check for updates"
+
+#: script/acp.php:42
+msgid "It is impossible to check for updates"
+msgstr "It is impossible to check for updates"
+
+#: script/acp.php:66 template.php:3
+msgid "Admin control panel"
+msgstr "Admin control panel"
+
+#: script/download.php:15
+msgid "Error, the link that you entered does not contain the file ID!"
+msgstr "Error, the link that you entered does not contain the file ID!"
+
+#: script/download.php:29
+msgid "Error, the file you are trying to download does not exist."
+msgstr "Error, the file you are trying to download does not exist."
+
+#: script/download.php:46
+msgid ""
+"Error, this file can be downloaded only by the owner. You are not authorized "
+"to download it."
+msgstr ""
+"Error, this file can be downloaded only by the owner. You are not authorized "
+"to download it."
+
+#: script/download.php:53
+msgid "Fatal error: The database is not healthy!"
+msgstr "Fatal error: The database is not healthy!"
+
+#: script/download.php:85
+msgid ""
+"Fails, the password set by the person who provided the file download is not "
+"installed or is wrong. <br/>You are not authorized to download!"
+msgstr ""
+"Fails, the password set by the person who provided the file download is not "
+"installed or is wrong. <br/>You are not authorized to download!"
+
+#: script/download.php:96
+msgid ""
+"Error: file cookie isn't isset and you aren't allowed to download required "
+"file"
+msgstr ""
+"Error: file cookie isn't isset and you aren't allowed to download required "
+"file"
+
+#: script/download.php:110 template.php:39 template.php:45 template.php:81
+msgid "Download"
+msgstr "Download"
+
+#: script/errors.php:16
+msgid "Error 404"
+msgstr "Error 404"
+
+#: script/file_browser.php:56
+msgid "File browser"
+msgstr "File browser"
+
+#: script/file_manipulator.php:93
+msgid "Error, the file that you tried was not found."
+msgstr "Error, the file that you tried was not found."
+
+#: script/file_manipulator.php:112 template.php:87
+msgid "File overview"
+msgstr "File overview"
+
+#: script/index.php:13 template.php:168 template.php:192
+msgid "Home Page"
+msgstr "Home Page"
+
+#: script/login.php:7
+msgid "Error: username or password is incorrect"
+msgstr "Error: username or password is incorrect"
+
+#: script/login.php:8
+msgid "Login wrong"
+msgstr "Login wrong"
+
+#: script/login.php:15 template.php:234
+msgid "Login successful"
+msgstr "Login successful"
+
+#: script/login.php:22 template.php:171
+msgid "Login"
+msgstr "Login"
+
+#: script/logout.php:6 template.php:189
+msgid "Logout"
+msgstr "Logout"
+
+#: script/register.php:3
+msgid "Error, registration has been disabled."
+msgstr "Error, registration has been disabled."
+
+#: script/register.php:4 script/register.php:30 template.php:174
+msgid "Register"
+msgstr "Register"
+
+#: script/register.php:14
+msgid ""
+"There was an error:<br/><ul><li>check that you have entered all the fields;</"
+"li><li>Could it be that the username you specified has already been used by "
+"someone else, try a different one!</li></ul>"
+msgstr ""
+"There was an error:<br/><ul><li>check that you have entered all the fields;</"
+"li><li>Could it be that the username you specified has already been used by "
+"someone else, try a different one!</li></ul>"
+
+#: script/register.php:15
+msgid "Registration is not carried out"
+msgstr "Registration is not carried out"
+
+#: script/register.php:23
+msgid "Registered successfully"
+msgstr "Registered successfully"
+
+#: script/ucp.php:63 template.php:186
+msgid "User control panel"
+msgstr "User control panel"
+
+#: script/upload.php:25 script/upload.php:89 template.php:165 template.php:177
+msgid "Upload"
+msgstr "Upload"
+
+#: script/upload.php:33
+msgid "There was an error while uploading the file."
+msgstr "There was an error while uploading the file."
+
+#: script/upload.php:41
+msgid "Error, the file is too big!"
+msgstr "Error, the file is too big!"
+
+#: script/upload.php:58
+msgid "Error, you have exceeded the maximum number of files. Delete something!"
+msgstr ""
+"Error, you have exceeded the maximum number of files. Delete something!"
+
+#: template.php:6
+msgid "Welcome admin!"
+msgstr "Welcome admin!"
+
+#: template.php:9
+msgid ""
+"Welcome admin in the admin control panel, here you can perform tasks from "
+"admin!"
+msgstr ""
+"Welcome admin in the admin control panel, here you can perform tasks from "
+"admin!"
+
+#: template.php:15
+msgid "There are updates available, the latest available version is %1, click"
+msgstr "There are updates available, the latest available version is %1, click"
+
+#: template.php:18
+msgid "here"
+msgstr "here"
+
+#: template.php:21
+msgid "You have the latest version available"
+msgstr "You have the latest version available"
+
+#: template.php:24 template.php:90 template.php:294
+msgid "File name"
+msgstr "File name"
+
+#: template.php:27 template.php:54 template.php:93 template.php:297
+msgid "File size"
+msgstr "File size"
+
+#: template.php:30
+msgid "Required password"
+msgstr "Required password"
+
+#: template.php:33
+msgid "Yes"
+msgstr "Yes"
+
+#: template.php:36
+msgid "Insert password"
+msgstr "Insert password"
+
+#: template.php:42
+msgid "No"
+msgstr "No"
+
+#: template.php:48
+msgid "404 Error!"
+msgstr "404 Error!"
+
+#: template.php:51
+msgid ""
+"Reality is appearance, mistakes are always in wait.<br/>This page doesn't "
+"exist, now, one day it might.<br/>Come back to a safer harbour:"
+msgstr ""
+"Reality is appearance, mistakes are always in wait.<br/>This page doesn't "
+"exist, now, one day it might.<br/>Come back to a safer harbour:"
+
+#: template.php:57 template.php:96
+msgid "File type"
+msgstr "File type"
+
+#: template.php:60 template.php:102
+msgid "File password"
+msgstr "File password"
+
+#: template.php:63 template.php:108 template.php:150
+msgid "File visibility"
+msgstr "File visibility"
+
+#: template.php:66
+msgid "Operations on the file"
+msgstr "Operations on the file"
+
+#: template.php:69
+msgid "Edit"
+msgstr "Edit"
+
+#: template.php:72
+msgid "Change visibility"
+msgstr "Change visibility"
+
+#: template.php:75
+msgid ""
+"Caution! This operation is irreversible. The file %1 will be removed from "
+"the system. Continue?"
+msgstr ""
+"Caution! This operation is irreversible. The file %1 will be removed from "
+"the system. Continue?"
+
+#: template.php:78
+msgid "Delete"
+msgstr "Delete"
+
+#: template.php:84
+msgid "There aren't your files in our database. To see them you should upload!"
+msgstr ""
+"There aren't your files in our database. To see them you should upload!"
+
+#: template.php:99
+msgid "File ID"
+msgstr "File ID"
+
+#: template.php:105
+msgid "There is no password"
+msgstr "There is no password"
+
+#: template.php:111
+msgid ""
+"Remember that if the file is set to private anyone outside of you can "
+"download it. To restrict access you can set a password."
+msgstr ""
+"Remember that if the file is set to private anyone outside of you can "
+"download it. To restrict access you can set a password."
+
+#: template.php:114
+msgid "File edit"
+msgstr "File edit"
+
+#: template.php:117 template.php:120 template.php:273 template.php:276
+msgid "Change password"
+msgstr "Change password"
+
+#: template.php:123
+msgid "Mark the file as private"
+msgstr "Mark the file as private"
+
+#: template.php:126
+msgid "Mark the file as public"
+msgstr "Mark the file as public"
+
+#: template.php:129 template.php:279
+msgid "Dangerous zone!"
+msgstr "Dangerous zone!"
+
+#: template.php:132
+msgid ""
+"Caution! This operation is irreversible. The file %1 will no longer have the "
+"same identification code and then all the links associated with it will lead "
+"to an error and must be upgraded. Continue?"
+msgstr ""
+"Caution! This operation is irreversible. The file %1 will no longer have the "
+"same identification code and then all the links associated with it will lead "
+"to an error and must be upgraded. Continue?"
+
+#: template.php:135
+msgid "Change file ID"
+msgstr "Change file ID"
+
+#: template.php:138
+msgid ""
+"Caution! This operation is irreversible. The file %1 is removed from the "
+"system. Continue?"
+msgstr ""
+"Caution! This operation is irreversible. The file %1 is removed from the "
+"system. Continue?"
+
+#: template.php:141
+msgid "Delete file"
+msgstr "Delete file"
+
+#: template.php:144
+msgid "Powered by"
+msgstr "Powered by"
+
+#: template.php:147
+msgid "created by"
+msgstr "created by"
+
+#: template.php:153
+msgid "Public"
+msgstr "Public"
+
+#: template.php:156
+msgid "Private"
+msgstr "Private"
+
+#: template.php:159
+msgid "File (max size: %1)"
+msgstr "File (max size: %1)"
+
+#: template.php:162 template.php:210 template.php:222 template.php:246
+#: template.php:261
+msgid "Password"
+msgstr "Password"
+
+#: template.php:180
+msgid "File Browser"
+msgstr "File Browser"
+
+#: template.php:183
+msgid "User"
+msgstr "User"
+
+#: template.php:195
+msgid ""
+"simple-file-sharing is a simple program written in PHP for file sharing and "
+"hosting."
+msgstr ""
+"simple-file-sharing is a simple program written in PHP for file sharing and "
+"hosting."
+
+#: template.php:198
+msgid ""
+"The program is released under the GPLv3 license, if you are interested to "
+"view its code can click on the link in the footer of the page that takes you "
+"to the page of googlecode. Here, you can clone the git repository."
+msgstr ""
+"The program is released under the GPLv3 license, if you are interested to "
+"view its code can click on the link in the footer of the page that takes you "
+"to the page of googlecode. Here, you can clone the git repository."
+
+#: template.php:201
+msgid "To upload a file you must sign up :-)"
+msgstr "To upload a file you must sign up :-)"
+
+#: template.php:204
+msgid "Please sign in"
+msgstr "Please sign in"
+
+#: template.php:207 template.php:219 template.php:243
+msgid "Username"
+msgstr "Username"
+
+#: template.php:213 template.php:225
+msgid "Send"
+msgstr "Send"
+
+#: template.php:216
+msgid "Please sign up"
+msgstr "Please sign up"
+
+#: template.php:228
+msgid "Login successful :-)"
+msgstr "Login successful :-)"
+
+#: template.php:231
+msgid "You will be redirected to the home page short ;-)"
+msgstr "You will be redirected to the home page short ;-)"
+
+#: template.php:237
+msgid "Registration completed successfully!"
+msgstr "Registration completed successfully!"
+
+#: template.php:240
+msgid "Here is the summary of your data. We suggest that you print this page."
+msgstr "Here is the summary of your data. We suggest that you print this page."
+
+#: template.php:249
+msgid "Hallo %1!"
+msgstr "Hallo %1!"
+
+#: template.php:252
+msgid ""
+"Hallo <b>%1</b>,<br/>welcome to the user control panel! Here you can real "
+"all regards you and you can edit it."
+msgstr ""
+"Hallo <b>%1</b>,<br/>welcome to the user control panel! Here you can real "
+"all regards you and you can edit it."
+
+#: template.php:255
+msgid "The only one thing you can't edit is your username."
+msgstr "The only one thing you can't edit is your username."
+
+#: template.php:258
+msgid "Status report"
+msgstr "Status report"
+
+#: template.php:264
+msgid "Total space of files"
+msgstr "Total space of files"
+
+#: template.php:267
+msgid "of a total of"
+msgstr "of a total of"
+
+#: template.php:270
+msgid "User changes"
+msgstr "User changes"
+
+#: template.php:282
+msgid ""
+"Are you sure you want to delete your account and all files associated with "
+"it? Caution! This operation is irreversible!"
+msgstr ""
+"Are you sure you want to delete your account and all files associated with "
+"it? Caution! This operation is irreversible!"
+
+#: template.php:285
+msgid "Delete your account"
+msgstr "Delete your account"
+
+#: template.php:288
+msgid "File succesfull uploaded"
+msgstr "File succesfull uploaded"
+
+#: template.php:291
+msgid "File details"
+msgstr "File details"
+
+#: template.php:300
+msgid "Password for download"
+msgstr "Password for download"
+
+#: template.php:303
+msgid "Visibility file"
+msgstr "Visibility file"
+
+#: template.php:306
+msgid "Link download file"
+msgstr "Link download file"

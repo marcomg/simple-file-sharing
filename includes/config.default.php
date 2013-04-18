@@ -18,14 +18,23 @@ File di configurazione dello script php
 */
 
 define('SCRIPT_URL', 'localhost'); // Url sito senza slash finale
-define('TEMPLATE_FOLDER', 'templates/twitter'); // Url dove si trovano i template senza slash finale
 define('DIR_INSTALL', '/simple-file-sharing'); // cartella nella quale è lo script Es '/cartella' (serve solo per i template) non mettere lo slash finale!! Mettere quello iniziale. Nel caso di installazione nella root non mettere nulla!
 define('LANGUAGE', 'it'); // Lingua nella quale visualizzare lo script
 define('LONG_FILE_NAME', 5); // Lunghezza del nome del file.
-define('DIR_TEMPLATE', ROOT.'/'.TEMPLATE_FOLDER.'/'.LANGUAGE);
-define('DIR_TEMPLATE_VAR', './'.TEMPLATE_FOLDER.'/'.LANGUAGE.'/templates');
+
+define('TEMPLATE_FOLDER', 'template'); // Url dove si trovano i template senza slash finale
+define('DIR_TEMPLATE', ROOT.'/'.TEMPLATE_FOLDER);
+define('DIR_TEMPLATE_VAR', './'.TEMPLATE_FOLDER.'/templates');
 define('DIR_TEMPLATE_IMGS', DIR_TEMPLATE_VAR.'/images');
 define('USER_CAN_REGISTER', 'true');
+
+/*
+File di configurazione di gettext
+*/
+define('LOCALE_DIR', ROOT .'/locale'); // Cartella dove si trovano le traduzioni
+$supported_locales = array('en_US', 'it_IT'); // Lingue supportate
+$encoding = 'UTF-8'; // Codifica
+$locale = 'en_US'; // Lingua predefinita
 
 /*
 Configurazioni che verranno completate nel file commons.php
