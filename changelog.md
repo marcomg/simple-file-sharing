@@ -1,5 +1,9 @@
 [TOC]
 # 1.2 branch #
+## 1.2.3-beta ##
+* Added script for create and compile and merge translation
+* Optimized language and it translation
+* Removed en_US translation
 ## 1.2.2-beta ##
 * Optimized config
 * Using php-gettext library for translation and not system gettext
