@@ -99,9 +99,9 @@ unset($params['count']);
 
 // use plural if required parameters are set
 if (isset($count) && isset($plural)) {
-$text = ngettext($text, $plural, $count);
+$text = T_ngettext($text, $plural, $count);
 } else { // use normal
-$text = gettext($text);
+$text = T_gettext($text);
 }
 
 // run strarg if there are parameters

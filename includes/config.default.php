@@ -35,6 +35,7 @@ define('LOCALE_DIR', ROOT .'/locale'); // Cartella dove si trovano le traduzioni
 $supported_locales = array('en_US', 'it_IT'); // Lingue supportate
 $encoding = 'UTF-8'; // Codifica
 $locale = 'en_US'; // Lingua predefinita
+$domain = 'messages'; // Dominio
 
 /*
 Configurazioni che verranno completate nel file commons.php

@@ -8,7 +8,7 @@ if($user != false){
 
 // Controllo se è loggiato se no stampo un errore!
 if(!$user){
-    $smarty->assign('error', _('Error: you do not have permission to access this page').' '._('Login!'));
+    $smarty->assign('error', T_('Error: you do not have permission to access this page').' '.T_('Login!'));
     $smarty->display('header.tpl');
     $smarty->display('footer.tpl');
     exit;
@@ -16,7 +16,7 @@ if(!$user){
 
 // Controllo che l'utente non sia admin e in tal caso errore
 if($user['rule'] !== 'admin'){
-    $smarty->assign('error', _('Error: you do not have permission to access this page'));
+    $smarty->assign('error', T_('Error: you do not have permission to access this page'));
     $smarty->display('header.tpl');
     $smarty->display('footer.tpl');
     exit;
@@ -29,7 +29,7 @@ if($user['rule'] == 'admin'){
 
 switch($_GET['admin_action']){
     case 'check_for_updates':
-        $smarty->assign('title', _('Check for updates'));
+        $smarty->assign('title', T_('Check for updates'));
         
         // Prelevo la nostra versione
         $_ = file(ROOT.'/version.txt');
@@ -39,7 +39,7 @@ switch($_GET['admin_action']){
         $_ = file('https://bitbucket.org/marcomg/simple-file-sharing/raw/master/version.txt');
         
         if(!$_){
-            $smarty->assign('error', _('It is impossible to check for updates'));
+            $smarty->assign('error', T_('It is impossible to check for updates'));
             $version = 0;
         }
         else{
@@ -63,7 +63,7 @@ switch($_GET['admin_action']){
     break;
     
     case 'overview':
-        $smarty->assign('title', _('Admin control panel'));
+        $smarty->assign('title', T_('Admin control panel'));
         $smarty->display('acp.tpl');
     break;
     

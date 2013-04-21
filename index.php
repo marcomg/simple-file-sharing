@@ -21,9 +21,8 @@ require(ROOT.'/includes/config_smarty.php');
 
 // GETTEXT
 T_setlocale(LC_MESSAGES, $locale);
-$domain = 'messages';
-bindtextdomain($domain, LOCALE_DIR);
-textdomain($domain);
+T_bindtextdomain($domain, LOCALE_DIR);
+T_textdomain($domain);
 
 // Includo il file di commons. Contiene molte cose tra cui la traduzione in byte di alcune variabili nel file di configurazione.
 require(ROOT.'/includes/commons.php');

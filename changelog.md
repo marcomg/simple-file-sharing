@@ -1,5 +1,8 @@
 [TOC]
 # 1.2 branch #
+## 1.2.2-beta ##
+* Optimized config
+* Using php-gettext library for translation and not system gettext
 ## 1.2.1-beta ##
 * Removed AES library because we didn't use it
 * Using gettext for locale

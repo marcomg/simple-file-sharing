@@ -7,7 +7,7 @@ if($user != false){
 
 // Controllo se è loggiato se no stampo un errore!
 if(!$user){
-    $smarty->assign('error', _('Error: you do not have permission to access this page').' '._('Login!'));
+    $smarty->assign('error', T_('Error: you do not have permission to access this page').' '.T_('Login!'));
     $smarty->display('header.tpl');
     $smarty->display('footer.tpl');
     exit;
@@ -22,7 +22,7 @@ if($user['rule'] == 'admin'){
 // Se non è settato il post allora stampo il form
 if(!isset($_POST['visibility']) or !isset($_FILES['file'])){
     $smarty->assign('max_file_size', return_human_value(MAX_FILE_SIZE));
-    $smarty->assign('title', _('Upload'));
+    $smarty->assign('title', T_('Upload'));
     $smarty->display('form_upload.tpl');
     exit;
 }
@@ -30,7 +30,7 @@ if(!isset($_POST['visibility']) or !isset($_FILES['file'])){
 // Se arrivo a questo punto il form è stato inviato
 // Controllo se il form sia stato inviato correttamente eche il file sia corretto
 if(empty($_POST['visibility']) or $_FILES['file']['error'] > 0){
-    $smarty->assign('error', _('There was an error while uploading the file.'));
+    $smarty->assign('error', T_('There was an error while uploading the file.'));
     $smarty->display('header.tpl');
     $smarty->display('footer.tpl');
     exit;
@@ -38,7 +38,7 @@ if(empty($_POST['visibility']) or $_FILES['file']['error'] > 0){
 
 // Controllo che il file abbia una dimensione inferiore a quella impostata
 if ($_FILES['file']['size'] > MAX_FILE_SIZE){
-    $smarty->assign('error', _('Error, the file is too big!'));
+    $smarty->assign('error', T_('Error, the file is too big!'));
     $smarty->assign('max_file_size', return_human_value(MAX_FILE_SIZE));
     $smarty->display('form_upload.tpl');
     exit;
@@ -55,7 +55,7 @@ if(MAX_DATA_FOR_USER != 0){
     // Controllo che lo spazio occupato non sia superiore a quello impostato. Se lo è genero e stampo l'errore.
     // lo scritp si ferma qui nel caso ci sia errore
     if($space_occuped >= MAX_DATA_FOR_USER){
-        $smarty->assign('error', _('Error, you have exceeded the maximum number of files. Delete something!'));
+        $smarty->assign('error', T_('Error, you have exceeded the maximum number of files. Delete something!'));
         $smarty->assign('max_file_size', return_human_value(MAX_FILE_SIZE));
         $smarty->display('form_upload.tpl');
         exit;
@@ -86,7 +86,7 @@ if(move_uploaded_file($_FILES['file']['tmp_name'], ROOT.'/uploads/'.$filename)){
     $smarty->assign('file_visibility', $_POST['visibility']);
     $smarty->assign('link_file', 'http://'.SCRIPT_URL.DIR_INSTALL.'/index.php?action=download&amp;file='.$filename);
     
-    $smarty->assign('title', _('Upload'));
+    $smarty->assign('title', T_('Upload'));
     
     $smarty->display('upload.tpl');
     

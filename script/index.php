@@ -10,6 +10,6 @@ if($user['rule'] == 'admin'){
     $smarty->assign('print_admin_panel', 'true');
 }
 
-$smarty->assign('title', _('Home Page'));
+$smarty->assign('title', T_('Home Page'));
 $smarty->display('index.tpl');
 ?>
