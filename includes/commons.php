@@ -14,9 +14,4 @@ else{
 // Configurazione massimo peso di dati che un utente puù memorizzare nel server
 define('MAX_DATA_FOR_USER', return_bytes($max_data_for_user));
 
-
-###########################################
-###File di commons per la configurazione###
-###########################################
-
 ?>
