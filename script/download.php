@@ -65,6 +65,11 @@ if(!isset($_GET['info']) or empty($_GET['info']) or $_GET['info'] == 'yes'){
         $smarty->assign('password_form', 'yes');
     }
     
+    // Se il cookie è già stato settato lo cancello dal database e lo rimpiazzo
+    if(!empty($_COOKIE['idfcd'])){
+        $db->query('DELETE FROM `downloads` WHERE `idfcd` = \'' . $db->escape_string($_COOKIE['idfcd']) . '\'');
+    }
+    
     // Setto i cookies per autorizzare il download
     $idfcd = generate_idfcd($user['idu'], $file_id);
     setcookie('idfcd', $idfcd, time() + 3600);
@@ -86,10 +91,13 @@ if(isset($_GET['info']) and $_GET['info'] == 'no'){
     }
     
     // Se non sono settati giustamente i cookies per il download non faccio scaricare
+    if(!isset($_COOKIE['idfcd'])){
+        $_COOKIE['idfcd'] = null;
+    }
     $result = $db->query("SELECT * FROM `downloads` WHERE `idfcd` = '".$db->escape_string($_COOKIE['idfcd'])."'");
     $result = $db->fetch_array($result);
     if(!empty($result) and $result['idf']==$file_id){
-        $can_download = 'yes';
+        //$can_download = 'yes';
     }
     else{
         $can_download = 'no';
@@ -97,7 +105,12 @@ if(isset($_GET['info']) and $_GET['info'] == 'no'){
     }
     
 }
-if(isset($can_download) and $can_download == 'yes'){    
+if(isset($can_download) and $can_download == 'yes'){
+    // Delete cookie and db query
+    setcookie('idfcd', null, 0);
+    $db->query('DELETE FROM `downloads` WHERE `idd` = ' . $result['idd']);
+    
+    // Prepare to download
     header('Cache-Control: public');
     header('Content-Description: File Transfer');
     header('Content-type: '.$file_type);
