@@ -67,12 +67,13 @@ switch($todo){
         require(ROOT.'/includes/config.php');
         $db = new MYSQL();
         $db->query("INSERT INTO `users` (`idu`, `username`, `password`, `rule`) VALUES (NULL, 'admin', 'admin', 'admin')");
+        $success = true;
         require(ROOT.'/install/make_admin.tpl');
     break;
     
     case 'clear':
         unlink(ROOT.'/install.php');
-        unlink(ROOT.'/install/db.txt')
+        unlink(ROOT.'/install/db.txt');
         header('Location: index.php');
     break;
     
