@@ -12,20 +12,20 @@
 <br/>
 
 <div class="container">
-<h1>Installer STEP 3/4</h1>
+<h1>Installer STEP 4/4</h1>
 <h3>Create database</h3>
 <div class="alert <?php if($success) echo('alert-success'); else echo('alert-error'); ?>"><p>
 <?php 
 if($success)
-echo('Database successfull installed! You can go to the next step!');
+echo('Admin account created. Username and password is admin, if you want to change username you can edit it in database. You can go to the next step!');
 
 else
-echo('Unknow error! Please install by hand the database. The sql file is in <em>./includes/mysql.database.sql</em>.');
+echo('Unknow error! Please insert admin account by hand having care to inserto role admin.');
 ?>
 </p></div>
 <?php
 if($success)
-echo('<p class="text-right"><a class="btn btn-primary" href="install.php">Continue the wizard installing the database <i class="icon-arrow-right"></i></a></p>');
+echo('<p class="text-right"><a class="btn btn-primary" href="install.php?clear=true">Clean the install file and go to the home page<i class="icon-arrow-right"></i></a></p>');
 ?>
 
 <br/>

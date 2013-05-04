@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Installer STEP 1/3</title>
+<title>Installer STEP 1/4</title>
 <link rel="icon" href="install/favicon.ico" />
 <link href="install/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script src="install/js/jquery.js"></script>
@@ -12,7 +12,7 @@
 <br/>
 
 <div class="container">
-<h1>Installer STEP 1/3</h1>
+<h1>Installer STEP 1/4</h1>
 <h3>Create config file</h3>
 <p>Please create the config file in <em>./includes/config.php</em> using as example the file <em>./includes/config.default.php</em></p>
 <p>Next press the database install botton</p>

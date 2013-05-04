@@ -21,8 +21,11 @@ elseif(!file_exists(ROOT.'/uploads/.htaccess')){
     $todo = 'make_files';
 }
 // Controllo se esiste il database
-elseif(file_exists(ROOT.'/includes/config.php')){
+elseif(file_exists(ROOT.'/includes/config.php') and !file_exists(ROOT.'/install/db.txt')){
     $todo = 'make_database';
+}
+elseif(file_exists(ROOT.'/install/db.txt')){
+    $todo = 'make_admin';
 }
 else{
     $todo = '?';
@@ -56,7 +59,15 @@ switch($todo){
         else{
             $success = false;
         }
+        fopen(ROOT.'/install/db.txt', 'w');
         require(ROOT.'/install/make_database.tpl');
+    break;
+    
+    case 'make_admin':
+        require(ROOT.'/includes/config.php');
+        $db = new MYSQL();
+        $db->query("INSERT INTO `users` (`idu`, `username`, `password`, `rule`) VALUES (NULL, 'admin', 'admin', 'admin')");
+        require(ROOT.'/install/make_admin.tpl');
     break;
     
     case 'clear':
