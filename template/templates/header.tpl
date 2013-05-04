@@ -36,7 +36,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="brand" href="https://code.google.com/p/simple-file-sharing/">simple-file-sharing</a>
+                    <a class="brand" href="https://bitbucket.org/marcomg/simple-file-sharing">simple-file-sharing</a>
                     <div class="nav-collapse collapse">
 {* Menù perenne *}
                         <ul class="nav">
