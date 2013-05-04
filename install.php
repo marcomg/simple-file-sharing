@@ -72,6 +72,7 @@ switch($todo){
     
     case 'clear':
         unlink(ROOT.'/install.php');
+        unlink(ROOT.'/install/db.txt')
         header('Location: index.php');
     break;
     
